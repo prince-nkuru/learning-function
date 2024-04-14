@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // get year method
+    const d = new Date("2024-04-11");
+    d.getFullYear();   // this will return 2024. 
+
+    // get month method
+     const d1 = new Date("2024-04-11");
+     let ds = d1.getMonth() + 1;
+     console.log(ds);
+
+     // You can use an array of names to return the month as a name:
+
+     const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+
+     const d2 = new Date();
+     let month = months[d2.getMonth()];
+     console.log (month);
+
+     // getDate method return date as number (1-31)
+
+     const d3 = new Date();
+     d.getDate();
+
+     // The getDay() method returns the weekday of a date as a number (0-6). sunday is 0.
+
+     const d4 = new Date();
+     d4.getDay();
+
+     // Dates can easily be compared.
+      let text = "";
+      const day = new Date ();
+      const someDay = new Date ();
+      someDay.setFullYear (2100, 0, 11);
+       if (someDay > day) {
+        text = "today is before january 2100 "
+       } else {
+        text = "today is after january 2100"
+       }
+       console.log (text);
+  </script>
+</body>
+</html>

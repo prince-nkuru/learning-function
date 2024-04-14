@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // arrays example
+
+    donuts = ["chocolate nut", "vanilla nut"];
+    console.log(donuts[0]); // to access first element in array
+
+    donuts[1] = "glazed cruller"; // changes the second element in the `donuts` array to "glazed cruller"
+    console.log(donuts[1]);
+
+   // arrays method
+    
+   //1 removing element of arrays using length
+   const fruits = ['Apple', 'Orange', 'Strawberry'];
+   fruits.length = 2;
+
+   console.log(fruits); // [ 'Apple', 'Orange' ]
+
+   //2 adding length using push at the end of arrays
+
+   let numbers = [10, 20, 30];
+
+   const length = numbers.push(40);
+
+   console.log(length);
+   console.log(numbers);
+
+   //3 adding arrays to an arrays using push and spread operators
+
+   let colors = ['red', 'green', 'blue'];
+   let cmyk = ['cyan', 'magenta', 'yellow', 'back'];
+
+    colors.push(...cmyk);
+
+    console.log(colors);
+
+    //4 using unshift to add element of an arrays to beginning
+
+    let numbers1 = [30, 40];
+
+    const length1 = numbers.unshift(20);
+
+    console.log({ length });
+    console.log({ numbers });
+
+    //5 removing element of arrays to the end using pop()
+
+    const numbers2 = [10, 20, 30];
+    const last = numbers.pop();
+
+    console.log(last); // 30
+    console.log(numbers.length); // 2
+
+    //6 removing  first element of arrays using shift()
+
+    const numbers3 = [10, 20, 30];
+    let number = numbers.shift();
+
+     console.log({ number });
+     console.log({ numbers3 });
+     console.log({ length: numbers3.length });
+
+  //7 using splice to delete,insert and replace : Array.splice(position,num);
+
+  let scores = [1, 2, 3, 4, 5];
+  let deletedScore = scores.splice(0, 3); // remove 1,2,3 elements
+  console.log(scores); //  [4, 5]
+
+  //8 adding element using splice. Array.splice(position,0,new_element_1,new_element_2,...);
+
+  let colors4 = ['red', 'green', 'blue'];
+  
+  colors4.splice(2,0, "purple");
+  console.log (colors4); // ["red", "green", "purple", "blue"]
+
+  //9 replaacing an element using splice () method
+
+   let languages = ['C', 'C++', 'Java', 'JavaScript'];
+
+   languages.splice(2,1, "python");
+   console.log(languages); // ['C', 'java', 'Java', 'JavaScript'];
+
+   //10 using slice() method to extract element . start index and end index
+    
+   var colors5 = ['red','green','blue','yellow','purple'];
+   var rgb = colors5.slice(0,3);
+   console.log(rgb); // ["red", "green", "blue"]
+
+
+    /*11 the forEach() method calls a function (a callback function) once for each array element.
+      it will return 
+      45
+      4
+      9
+      16
+      25
+      */
+    const numbers6 = [45, 4, 9, 16, 25];
+    let txt = "";
+    numbers6.forEach(myFunction);
+
+    function myFunction(value, index, array) {    // index and arrays are optional
+    txt += value + "<br>";
+}
+
+  //12 the map() method creates a new array by performing a function on each array element.
+   // The map() method does not execute the function for array elements without values
+
+   const numbers7 = [45, 4, 9, 16, 25];
+   const numbers8 = numbers7.map(myFunction);
+
+    function myFunction(value, index, array) {
+     return value * 2;
+}
+
+// 13 The filter() method creates a new array with array elements that pass a test.
+
+const numbers9 = [45, 4, 9, 16, 25];
+const over18 = numbers9.filter(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+//14 The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+//The total (the initial value / previously returned value)
+
+ const num = [45,4,9,16,25];
+ const num1 = num.reduce(myFunction);
+
+ function myFunction (total, value) {
+  return total + value;
+ }
+
+ //15 The every() method checks if all array values pass a test
+
+ const numberz = [45, 4, 9, 16, 25];
+ let allOver18 = numberz.every(myFunction);
+
+ function myFunction(value, index, array) {    // this will return false
+   return value > 18;
+}
+//16 The some() method checks if some array values pass a test. it works like every()
+    
+  </script>
+</body>
+</html>

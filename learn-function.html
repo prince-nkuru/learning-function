@@ -21,13 +21,14 @@
 
   <script>
   //1 function expression catSays
-var catSays = function(max) {
+  var catSays = function(max) {
   var catMessage = "";
   for (var i = 0; i < max; i++) {
     catMessage += "meow ";
   }
   return catMessage;
 };
+
 
 //2 function declaration helloCat accepting a callback
 function helloCat(callbackFunc) {
@@ -88,7 +89,32 @@ console.log("i am " + myString + "," + myFunc(2));
     }
     return sound;
   });
-  
+
+  // passing a function to another function
+
+  function add (a, b) {
+    return a + b;
+  }
+  let sum = add;
+
+  function average (a, b, fn) {
+    return fn (a, b) / 2;
+  }
+  let result = average ( 10, 14, sum);
+
+
+
+ 
+
+    // this is setTimeout example
+
+    function x() {
+      var i = 3;
+      setTimeout( function () {
+        console.log(i);
+      }, 2000)
+    }
+    x();
   </script>
 </body>
 </html>

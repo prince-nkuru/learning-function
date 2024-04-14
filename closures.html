@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function outest() {                                                            
+      var c = 20;
+      function outer(b) {
+            var a = 10;
+            function inner () {
+              console.log (a, b, c)
+            }
+            return inner;
+      }
+      return outer;
+    }
+
+     var close = outest() ("hello world");
+     close();
+
+     // data hiding
+
+     function counter () {        // we are hiding var count to outside using closures
+      var count = 20;
+      function incrementCounter (){
+        count++;
+        console.log(count);
+      }
+      return incrementCounter;
+     }
+     var result = counter()
+     result ();
+     result ();
+  </script>
+</body>
+</html>
