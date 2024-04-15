@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // before arrow
+
+    let hello = "";
+    hello = function () {
+      return "hello world";
+    }
+    hello();
+
+    // after arrow
+    let hello1 = "";
+
+    hello1 = () => {
+      return "hello world";
+    }
+    hello();
+
+    /*It gets shorter! If the function has only one statement, and the statement returns a value, you can remove the brackets and the return keyword:*/
+
+    hello = () => "hello world";
+
+    // If you have parameters, you pass them inside the parentheses
+    hello = (val) => "hello " + val;
+    hello("universe");
+
+    // In fact, if you have only one parameter, you can skip the parentheses as well:
+
+  </script>
+</body>
+</html>

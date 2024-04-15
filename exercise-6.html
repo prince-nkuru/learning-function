@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function loveFunc(flower1, flower2) {
+      if (flower1 % 2 === 0 && flower2 %2 === 1) return true
+      if (flower2 %2 === 0 && flower1 %2 ===1) return true
+      return false
+
+    }
+
+
+      /* you are given array a and value x. check if an array a contain value x.*/
+
+      function check (a, x) {
+        return a.indexOf(x) > -1 ;
+      }
+
+      /* for example , if parameter (2, 6) are passed into function, it should return (2,4,6) as 2,4,6 is multiple of 2,up to 6 */
+
+      function multipleOfNumber (integer, limit) {
+        let increment = 1;
+        a = [];
+        while (increment * integer <= limit) {
+             
+          a.push(increment * integer);
+          increment++;
+        }
+      }
+
+      // sort alphabetically and return first value joined with asteriks ***. it should be a string
+
+      function sort() {
+        let a = [];
+         let b = a.sort();
+         b[0].split("").join("***");
+      }
+
+      // return sum of all positive number
+
+      function positiveSUM(arr) {
+        return array.filter(number => number > 0).reduce((total, currentValue) => {
+        return total +currentValue;
+      }, 0)
+      }
+
+      let someString = "nkurunziza prince";
+      console.log(someString.split(""));
+  
+  </script>
+</body>
+</html>
