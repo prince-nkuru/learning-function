@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+ <div class="parent">
+  <p class="text"></p>
+ </div>
+
+
+
+
+
+
+  <script>
+    // different ways of getting element in html 
+    //1 document.getElementById()
+    //2 getElementByName
+    //3 getElementByTagName
+    //4 document.querySelector(.classname) select first element that meet conditions.
+    // but querySelectorAll select all specified class
+
+    let txt = document.querySelector('.text');
+    let parents = document.querySelector('.parent')
+    console.log(txt.parentNode); // accessing parent div using child
+    console.log(parents.firstElementChild)// accessing child using parent
+    console.log(parents.ChildNodes)// accessing all child element
+    console.log(txt.nextElementSibling)// accessing next element. accessing previous use previous
+
+    // creating element of html
+
+    let div = document.createElement('div');
+    div.innerHTML = '<P>welcome all</p>'
+      console.log(div);
+
+      document.body.appendChild(div);
+  </script>
+</body>
+</html>

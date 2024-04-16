@@ -49,9 +49,100 @@
       }, 0)
       }
 
-      let someString = "nkurunziza prince";
-      console.log(someString.split(""));
-  
+      // returning 2 names shuffled
+
+      //let someString = "nkurunziza prince";
+     // console.log(someString.split(' ').reverse()); // one way 
+
+      // best way
+      let func = function (someString) {
+        let [first, last] = someString.split(' ');
+        return last + " " + first;
+      }
+      console.log(func('nkurunziza prince'));
+
+
+      /*complete the function that takes non negative integer n as input and return a list of all power  of 2 with the exponent ranging from 0 to n (inclusive)*/
+
+      function powerNumber(n) {
+        let arr = [];
+        for (i = 0; i < n; i++){
+          arr.push(Math.pow(2, i));
+        }
+        return arr;
+      }
+
+      // given a string, you have to return a string in which each character is repeated once
+      // ex: "string" will be "ssttrriinngg"
+
+      function doubleChar(str) {
+        let result = '';
+        for (const char of str){
+          result += char + char;
+        }
+        return result;
+      }
+      console.log(doubleChar('prince'));   
+
+      // return inverse of each number. each positive become negative and each negative become positive
+
+      function invert(array) {
+      return array.map((number) => number * -1) ;
+     }
+    // build a function that return an array of integer from n to 1 where n > 0
+    // ex: if n = 5 => [5,4,3,2,1]
+
+    const reverseSeq = n => {
+     const result = [];
+     for (i = n; i > 0; i--){
+    
+     result.push(i);
+     }
+     return result
+    };
+  /*Given an unsorted array of 3 positive integers [ n1, n2, n3 ], determine if it is possible to form a  Pythagorean Triple using those 3 integers.
+  A Pythagorean Triple consists of arranging 3 integers, such that:
+  a2 + b2 = c2*/
+
+  function isPythagoreanTriple(integers) {
+  integers.sort((a, b) => a-b);
+  const [a, b, c] = integers;
+  return Math.pow(c, 2) === Math.pow(a, 2) + Math.pow(b,2);
+}
+
+  /*Given an array of integers as strings and numbers, return the sum of the array values as if all were  numbers.
+
+   Return your answer as a number.*/ 
+
+   function sumMix(x){
+   return x.map(n => parseInt(n)).reduce((total, currentValue) => {
+   return total + currentValue;
+   }, 0)
+   }
+
+   // function that return the string with removed first and last character
+
+   function removeChar(str){
+ //You got this!
+  return str.slice(1, -1);
+  };
+
+  // Complete the function which converts hex number (given as a string) to a decimal number.
+
+  function hexToDec(hexString){
+  return parseInt(hexString, 16)
+  }
+
+  /*Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.*/
+
+  var counting = function sheepCount(num) {
+    let sheepString = '';
+    for (let i = 1; i < num; i++){
+      sheepString += i.toString() + ' sheep...';
+    }
+    return sheepString;
+  }
+   
   </script>
 </body>
 </html>
