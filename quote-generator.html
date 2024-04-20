@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <div class="container">
+    <h3>javascript quote generator</h3>
+    <div class="card">
+      <p>i do the very best i know how, the very best i can and i mean to keep on doing so
+        unti the end
+      </p>
+      <p class="abraham">abraham lincoln</p>
+      <button class="button">new quote</button>
+    </div>
+  </div>
+
+  <script>
+    let card = document.querySelector('.card');
+    let abraham = document.querySelector('.abraham');
+    let btn = document.querySelector('.button');
+
+    btn.addEventListener('click', function (){
+      let arr = ['biden', 'trump', 'obama', 'kennedy'];
+
+      let random = Math.floor (Math.random() * arr.length);
+      abraham.innerText = arr[random];
+      abraham.style.color = 'violet'
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+p {
+  position: relative;
+  width: 500px;
+  min-height: 150px;
+  background:linear-gradient(120deg, #74742b,#f87);
+  padding: 50px 30px;
+  margin: 50px auto;
+  border: none;
+  color: #fff;
+  outline: none;
+}

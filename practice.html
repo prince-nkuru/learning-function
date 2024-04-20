@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <p contenteditable="true" class="content"></p>
+  <script>
+    /*function myFunction (x , y) {
+      return x + y;
+    }
+    let a = myFunction(3, 5);
+    let b = myFunction(5,8);
+    console.log(a);
+    console.log(b, a); */
+
+    // create function that will return 'hahaha'
+
+    let smile = '';
+
+    function laughing (laugh) {
+       for ( let i = 0 ; i < laugh; i++) {
+         smile += 'ha';
+       }
+       return smile;
+    }
+    console.log(laughing(6));
+    let capital ='kigali';
+    console.log(capital.toUpperCase());
+
+
+    // for a given string , produce a version of it with each letter joined with 3 asterisks(***)
+// such that 'prince' => p***r***i***n***c***e
+     let name = 'prince';
+     let joined = name.split('').join('***');
+     console.log(joined);
+
+
+  </script>
+</body>
+</html>

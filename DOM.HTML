@@ -36,7 +36,21 @@
     div.innerHTML = '<P>welcome all</p>'
       console.log(div);
 
-      document.body.appendChild(div);
+      document.body.appendChild(div);// adding to the webpage
+      // accessing content
+      console.log(parents.textContent)/* it will produce text inside it. for innerText show only visible element*/
+
+      // element.After(node) add an element after another
+      // setting an attribute
+      let att = document.setAttribute('id', learn)  // first is type of attribute, last is the name
+      // adding class Name
+      element.className.add('name') // ex: li.className.add('list-item')
+                                    // li.className.remove('list-item') this is way to remove item
+
+       // adding event listener
+       document.querySelector('.className').addEventListener('event',  function () {
+        // your code here
+       })                             
   </script>
 </body>
 </html>
