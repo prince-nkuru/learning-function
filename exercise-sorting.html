@@ -9,7 +9,9 @@
   <script>
     function orderWeight(strng) {
       let result = strng.split(' ');
-      return result;
+      for (const n of result) {
+        return n.split('');
+      }
     } 
     
    console.log(orderWeight('103,100,101,102'));
