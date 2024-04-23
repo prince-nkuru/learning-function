@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <script>
+
 // exercises for returning even number
     let arr = [10, 11, 12, 13, 14 , 15, 16, 17, 18, 19, 20];
     let newArr = [];
@@ -60,6 +52,4 @@
 
     
 
-  </script>
-</body>
-</html>
+  

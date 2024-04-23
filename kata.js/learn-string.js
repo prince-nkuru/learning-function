@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <script>
+
     // getting character
 
     let text = "HELLO WORLD";
@@ -38,6 +30,4 @@
 
     let texts4 = "Hello world!";
     let result = text4.repeat(2);
-  </script>
-</body>
-</html>
+  
