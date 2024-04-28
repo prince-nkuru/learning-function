@@ -7,8 +7,10 @@
 </head>
 <body>
   <script>
+    let word = [];
+    let res = [];
 let arr = ['Aa', 'aaa', 'aaaaa', 'BbBb', 'Aaaa', 'AaAaAa', 'a' ]
-var uniq = [...new Set(arr.join("").toLowerCase())];
+var uniq = [...new Set(arr.join("").toLowerCase())].map(n => (word = arr.filter(v => v.indexOf(n) != - 1)), word.length === 1 ? res = word.join('') : n);
 
 console.log(uniq);
 
