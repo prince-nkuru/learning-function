@@ -15,8 +15,25 @@ Examples
 [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7.......]*/
 
 function sortArray(array) {
-  // Extract odd numbers and their positions
-  const oddNumbers = [];
+ const oddNumber = [];
+ const oddIndices = [];
+
+ array.forEach((num,index) => {
+  if (num % 2 !== 0){
+    oddNumber.push(num);
+    oddIndices.push(index);
+  }
+ })
+ oddNumber.sort(a, b => b-a);
+ oddIndices.forEach((index, i) =>{
+  array[index] = oddNumber[i]
+ })
+ return array;
+}
+
+
+ // Extract odd numbers and their positions
+ const oddNumbers = [];
   const oddIndices = [];
   array.forEach((num, index) => {
     if (num % 2 !== 0) {
@@ -34,8 +51,6 @@ function sortArray(array) {
   });
 
   return array; // Return the updated array
-}
-
   </script>
 </body>
 </html>
