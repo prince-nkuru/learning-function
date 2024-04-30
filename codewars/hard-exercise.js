@@ -1,6 +1,6 @@
 <
     
-  function orderWeight(strng){
+  function orderWeight(strng) =>{
 
    var weights = strng.split(' ');
   

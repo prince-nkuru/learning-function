@@ -58,16 +58,16 @@ movies(favoriteMovie, "Finding Nemo");
 
   //5 this is a quiz . passing an inline expression. it will result in string "i am happy haha" 
 
-  function emotion(myString, myFunc) {
-console.log("i am " + myString + "," + myFunc(2));
-  }
-  emotion("happy", function(num) {
-    var sound = "";
-    for (var i = 0; i < num; i++) {
-      sound = sound + "ha";
-    }
-    return sound;
-  });
+   function emotion(myString, myFunc) {
+    console.log("i am " + myString + "," + myFunc(2));
+      }
+      emotion("happy", function(num) {
+        var sound = "";
+        for (var i = 0; i < num; i++) {
+          sound = sound + "ha";
+        }
+        return sound;
+      });
 
   // passing a function to another function
 

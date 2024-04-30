@@ -9,9 +9,13 @@
   <script>
     function orderWeight(strng) {
       let result = strng.split(' ');
-      for (const n of result) {
-        return n.split('');
-      }
+      return result.sort(function(a,b) {
+        let first = a.split('').reduce((total,currentValue) =>  Number(total) + Number(currentValue));
+        let second = b.split('').reduce((x, y) => Number(x) + Number(y));
+        return first - second === 0 ? a.localCompare(b) : first - second
+      } 
+     
+      ).join(" ")
     } 
     
    console.log(orderWeight('103,100,101,102'));

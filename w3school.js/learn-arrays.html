@@ -47,7 +47,7 @@
 
     const length1 = numbers.unshift(20);
 
-    console.log({ length });
+    console.log({ length1 });
     console.log({ numbers });
 
     //5 removing element of arrays to the end using pop()
@@ -85,13 +85,15 @@
    let languages = ['C', 'C++', 'Java', 'JavaScript'];
 
    languages.splice(2,1, "python");
-   console.log(languages); // ['C', 'java', 'Java', 'JavaScript'];
+   console.log(languages); // ['C', 'c++', 'python', 'JavaScript'];
 
    //10 using slice() method to extract element . start index and end index
     
    var colors5 = ['red','green','blue','yellow','purple'];
-   var rgb = colors5.slice(0,3);
-   console.log(rgb); // ["red", "green", "blue"]
+   var rgb = color5.slice(0, 3);
+   console.log(rgb); // it will produce [red, green, blue]
+
+   
 
 
     /*11 the forEach() method calls a function (a callback function) once for each array element.
