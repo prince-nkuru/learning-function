@@ -80,6 +80,23 @@ function add(num1, num2) {
   return result; // Return the final result as a string
 } 
 
+/*Your mission is to implement a function that converts the following potentially harmful characters:
+
+< --> &lt;
+> --> &gt;
+" --> &quot;
+& --> &amp;
+
+ */
+
+function htmlspecialchars(formData) {
+ formData = formData.replace(/&/g, '&amp;');
+ formData = formData.replace(/>/g, '&gt;');
+ formData = formData.replace(/</g, '&lt;');
+ formData = formData.replace(/"/g, '&quot;');
+ 
+  return formData;
+}
 
   </script>
 </body>
