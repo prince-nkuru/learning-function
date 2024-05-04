@@ -1,0 +1,47 @@
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+.form {
+  padding: 20px;
+  box-shadow: 2px 2px 8px rgb(11, 8, 8);
+  border-radius: 10px;
+  background-color: white;
+  margin: 10px;
+}
+.score {
+  text-align: center;
+  color: green;
+}
+.input {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 20px 0px;
+  
+
+  
+ 
+}
+.submit {
+  width: 100%;
+  text-align: center;
+  color: rgb(24, 22, 22);
+  background-color: rgb(199, 234, 166);
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
