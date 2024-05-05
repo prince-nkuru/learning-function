@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Store a simple key-value pair
+localStorage.setItem("username", "JohnDoe");
+
+// Store a JSON object (requires conversion to string)
+const user = { name: "John Doe", age: 30 };
+localStorage.setItem("user", JSON.stringify(user));
+
+
+// Retrieve a value by key
+const username = localStorage.getItem("username"); // "JohnDoe"
+
+// Retrieve and parse a JSON object
+const storedUser = JSON.parse(localStorage.getItem("user")); // { name: "John Doe", age: 30 }
+
+// Remove a specific key
+localStorage.removeItem("username");
+
+// Clear all local storage data
+localStorage.clear();
+  </script>
+</body>
+</html>
