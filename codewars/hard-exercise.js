@@ -1,8 +1,8 @@
 <
     
-  function orderWeight(strng) =>{
+  function orderWeight(strngs) =>{
 
-   var weights = strng.split(' ');
+   var weights = strngs.split(' ');
   
    return weights.sort(function(a, b) {
     var first = a.split('').reduce((x,y) => Number(x) + Number(y));

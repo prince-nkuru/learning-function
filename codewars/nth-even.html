@@ -9,7 +9,7 @@
   <script>
     /*Return the Nth Even Number
 
-'Example(Input --> Output)
+'Example(Input -> Outputs)
 
 1 --> 0 ('the first even number is 0')
 3 --> 4 ('the 3rd even number is 4 (0, 2, 4)')
@@ -19,6 +19,21 @@
 *
     function nthEven(n){
   return 2 * (n -1);
+}
+*/
+
+ /*the code provided is supposed replace all the dots . in the specified String str with dashes -
+
+But it's not working properly.
+
+Task
+Fix the bug so we can all go home early.
+
+Notes
+String str will never be null.*/
+
+ var replaceDots = function(str) {
+  return str.replace(/\./g, '-');
 }
   </script>
 </body>
