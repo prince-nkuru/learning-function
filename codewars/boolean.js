@@ -14,7 +14,7 @@ The correct answer would be 17.
 Hint: Don't forget to check for bad values like null/undefined */
 
 
-
+// when boolean is used , it filter out all falsy values like NAN, false, 0, '', undefined, null
 
 
 
