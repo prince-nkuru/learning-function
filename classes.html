@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javascript classes</title>
+</head>
+<body>
+  <script>
+    // classes in javascript
+
+    class Project {
+      constructor(){
+        console.log('this is first exercise of classes')
+        this.width = 5;
+        this.height = 3;
+        this.color = 'blue';
+      }
+    }
+   
+    let myObject2 = new Project();
+ // different way of doing it
+    class Project2 {
+      constructor(_width, _heigth, _color){
+        console.log('this is first exercise of classes')
+        this.width = -width;
+        this.height = -height;
+        this.color = -color;
+      }
+    }
+    let myObject1 = new Project(5,3, 'blue');
+  </script>
+</body>
+</html>
