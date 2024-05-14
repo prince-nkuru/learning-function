@@ -20,15 +20,28 @@
    
     let myObject2 = new Project();
  // different way of doing it
+ // through classes , you can create different object
     class Project2 {
-      constructor(_width, _heigth, _color){
+      constructor(_width, _height, _color){
         console.log('this is first exercise of classes')
-        this.width = -width;
-        this.height = -height;
-        this.color = -color;
+        this.width = _width;
+        this.height = _height;
+        this.color = _color;
       }
+      getArea (){
+        return this.width * this.height;
+       
+      }
+      printDescription(){
+        console.log(`i am a rectangle with ${this.width} x ${this.height} and i am ${this.color}`);
+      }
+      
     }
-    let myObject1 = new Project(5,3, 'blue');
+    let myObject1 = new Project2(5,3, 'blue');
+    console.log(myObject1.getArea())
+
+    myObject1.printDescription();
+    
   </script>
 </body>
 </html>
