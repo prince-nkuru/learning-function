@@ -41,7 +41,32 @@
     console.log(myObject1.getArea())
 
     myObject1.printDescription();
-    
+
+
+    // second example. let us see getter and setter
+
+    class square{
+      constructor (_width){
+        this.width = _width;
+        this.height = _width;
+        this.numOfReturn = 0;
+      }
+      get area() {
+        this.numOfReturn++;
+        return this.width * this.height
+      }
+      set area(area){
+        this.width = Math.sqrt(area);
+        this.height = this.width;
+      }
+    }
+    let mySquare1 = new square(25)
+    console.log(mySquare1.area)
+    mySquare1.area = 36;
+    console.log(mySquare1.width);
+    console.log(mySquare1.height); 
+    console.log(mySquare1.area)
+    console.log(mySquare1.numOfReturn);
   </script>
 </body>
 </html>
