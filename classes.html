@@ -67,6 +67,26 @@
     console.log(mySquare1.height); 
     console.log(mySquare1.area)
     console.log(mySquare1.numOfReturn);
+
+    // static classes
+
+    class Rectangle {
+      constructor (_width){
+        this.width = _width;
+        this.height = _width
+      }
+
+      static equals(a, b){
+        return a.width * a.height === b.width * b.height
+      }
+
+    }
+    let myRect1 = new Rectangle(8);
+    let myRect2 = new Rectangle(9)
+    console.log(Rectangle.equals(myRect1, myRect2));
+
+
+    // inheritances and extend
   </script>
 </body>
 </html>
