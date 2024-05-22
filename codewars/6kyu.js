@@ -20,3 +20,4 @@ function howManyStep(a, b) {
     return 1 + howManyStep(a, b / 2);
   }
 }
+// this is editing using nano command in bash terminal
