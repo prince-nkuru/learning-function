@@ -14,3 +14,37 @@ const result = keyValuePairs.reduce((p, keyValuePair) => {
   return p;
 }, {})
 console.log(result);
+
+
+// question 2. 
+// finding maximum or minimum value of salary of people object
+
+const people = [
+    {
+      name : 'dom',
+      occupation : 'software developer' ,
+      salary : 90000
+    } ,
+    {
+      name : 'max',
+      occupation: 'mechanic',
+      salary: 150000
+    },
+    {
+      name : 'eric',
+      occupation: 'medicine',
+      salary: 750000
+    } 
+  ]
+
+  const results = people.reduce((prev, current) => {
+    
+  
+    if (current.salary > prev){
+      return current.salary;
+     
+    } 
+    return prev;
+  }, 0)
+
+  console.log(results);
