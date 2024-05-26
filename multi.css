@@ -114,7 +114,7 @@ input {
 }
 
 /*this btn active css is may be not having an effect*/
-.btn:active {
+.btn.active {
   transform: scale(.98px);
 }
 
