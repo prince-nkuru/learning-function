@@ -1,6 +1,6 @@
 const prevBtns = document.querySelectorAll('.btn-pre');
 const nextBtns = document.querySelectorAll(('.btn-next'));
-const progress = document.getElementById('#progress');
+const progress = document.getElementById('progress');
 const formSteps = document.querySelectorAll('.form-step');
 const progresSteps = document.querySelectorAll('.progress-step');
 
@@ -42,4 +42,8 @@ if (idx < formStepsNum + 1){
   progresStep.classList.remove('active');
 }
 })
+
+const progressActive = document.querySelectorAll('.progress-step.active')
+
+progress.style.width = (progressActive.length - 1)/ (progresSteps.length - 1) * 100 + '%';
 }
