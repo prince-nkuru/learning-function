@@ -24,3 +24,39 @@ const firstNSmallest = (array, n) => {
   }
   return array
 }
+
+// second way
+
+function firstNSmallest(arr, n) {
+  // Sort the array and get the first n smallest elements
+  const sortedArr = [...arr].sort((a, b) => a - b).slice(0, n); // [...arr] creates new array without altering original 
+
+  // Create a result array
+  const result = [];
+
+  // Iterate over the original array
+  for (let num of arr) {
+      // Check if the current number is in the sorted array
+      const index = sortedArr.indexOf(num);
+
+      // If it is, add it to the result and remove it from the sorted array
+      if (index !== -1) {
+          result.push(num);
+          sortedArr.splice(index, 1);
+      }
+
+      // Stop if we've collected enough elements
+      if (result.length === n) {
+          break;
+      }
+  }
+
+  return result;
+}
+
+// Test cases
+console.log(firstNSmallest([1, 2, 3, 4, 5], 3)); // [1, 2, 3]
+console.log(firstNSmallest([5, 4, 3, 2, 1], 3)); // [3, 2, 1]
+console.log(firstNSmallest([1, 2, 3, 4, 1], 3)); // [1, 2, 1]
+console.log(firstNSmallest([1, 2, 3, -4, 0], 3)); // [1, -4, 0]
+console.log(firstNSmallest([1, 2, 3, 4, 5], 0)); // []
