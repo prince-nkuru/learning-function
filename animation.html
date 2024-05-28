@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation css</title>
+
+  <style>
+
+    *{
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      
+    }
+
+    .container{
+      background-color: red;
+      width: 300px;
+      height: 300px;
+      padding: 20px;
+    }
+
+    .child{
+      background-color: black;
+      color: white;
+      width: 100%;
+      text-align: center;
+      height: 100%;
+      font-size: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translate(50px, 50px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="child">hello </div>
+  </div>
+</body>
+</html>
