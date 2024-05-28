@@ -15,6 +15,7 @@
       height: 100vh;
       display: grid;
       place-items: center;
+      grid-template-columns: repeat(2, 1fr);
       
     }
 
@@ -35,7 +36,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: 3s ease-in-out;
+    
+    }
+    .child:hover {
       transform: translate(2px, 2px) scale(.5) rotate(50deg); /*translateY,x*/
+      background-color: darksalmon;
     }
     .circle {
       width: 100px;
@@ -47,18 +53,20 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: 1s;
+      transition: /*background 1s transform 1s*/ 1s;
 
     }
     .circle:hover{
       background-color: salmon;
+      transform: rotate(360deg);
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="child">hello </div>
-    <div class="circle">hover me</div>
+    
   </div>
+  <div class="circle">hover me</div>
 </body>
 </html>
