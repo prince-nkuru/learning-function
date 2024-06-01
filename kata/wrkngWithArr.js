@@ -12,3 +12,5 @@ function withoutMax(arr) {
   // arr.pop(); // removes the last element
   return arr.slice(0,-1);
 }
+
+// this contribution is done on 1st june
