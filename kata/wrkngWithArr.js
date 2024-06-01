@@ -14,3 +14,11 @@ function withoutMax(arr) {
 }
 
 // this contribution is done on 1st june
+
+// second way
+
+function withoutLast(arr) {
+  arr = [...arr]
+  arr.pop();
+  return arr;
+}
