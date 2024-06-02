@@ -62,3 +62,25 @@ If two consecutive flips leave the stack in the same state, they should be omitt
 For example, [2,3,2,2,1] also arranges [1,5,8,3] correctly, but 2,2 is unnecessary.
 Flipping only the top pancake doesn't achieve anything.
 Performance should not be a issue. If Pat can flip 1,000 pancakes with diameters between 1 and 1,000, he thinks he can get a job!*/
+
+function flip(xs) {
+  xs = xs.slice();
+  let ns = xs.slice().sort((a, b) => a - b);
+  let rs = [];
+  let j = xs.length - 1;
+  while (ns.length) {
+    let n = ns.pop();
+    let i = xs.indexOf(n);
+    if (i == j) j--;
+    else {
+      if (i != 0) {
+        rs.push(i);
+        xs = xs.slice(0, i + 1).reverse().concat(xs.slice(i + 1));
+      }
+      rs.push(j);
+      xs = xs.slice(0, j + 1).reverse().concat(xs.slice(j + 1));
+      j--;
+    }
+  }
+  return rs;
+}
