@@ -43,3 +43,10 @@ for (let i = 0; i < x.length; i++){
 }
   return Num - strng;
 }
+
+//question 3
+
+
+function takeUmbrella(weather, chance) {
+  return weather === 'rainy' || weather === 'cloudy' && chance > 0.20 || weather === 'sunny' && chance > 0.5? true : false
+}
