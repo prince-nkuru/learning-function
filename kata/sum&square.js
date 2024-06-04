@@ -24,3 +24,19 @@ function differenceOfSquares(n) {
     return (sum ** 2) - square;
   }
 }
+
+// question 2
+
+
+function divCon(x){
+  let Num = 0;
+  let strng = 0
+for (let i = 0; i < x.length; i++){
+  if (typeof x[i] == 'number'){
+    Num += x[i];
+  }else {
+    strng += parseInt(x[i])
+  }
+}
+  return Num - strng;
+}
