@@ -50,3 +50,18 @@ function isSatorSquare(tablet) {
 
   return true
 }
+
+// second question
+
+function spot(s1,s2){
+  let s1Arr = s1.split('');
+  let s2Arr = s2.split('');
+  let result = [];
+  
+  for (let i = 0; i < s1Arr.length; i++){
+    if (s1Arr[i] != s2Arr[i]){
+      result.push(i)
+    }
+  }
+  return result;
+}
