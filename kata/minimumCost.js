@@ -8,3 +8,12 @@ Range : 1 ≤ n ≤ 106*/
 // first
 
 const findJane = n => Math.ceil(n/2)-1;
+
+// second
+
+function findJane(n){
+  var s=0;
+  for (var i=1; i<n; ++i)
+    s+=(2*i+1)%(n+1)
+  return s%(n)
+}
