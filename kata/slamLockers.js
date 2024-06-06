@@ -19,3 +19,19 @@ Johnny runs down the row of lockers n times, starting at the first locker each r
 The goal of this kata is to determine which lockers are open at the end of Johnny's running.
 
 The program accepts an integer giving the total number of lockers, and should output an array filled with the locker numbers of those which are open at the end of his run.*/
+
+function openLockers(n) {
+  // Initialize an empty array to store the indices of open lockers
+  let openLockers = [];
+
+  // Iterate over possible locker numbers
+  for (let i = 1; i * i <= n; i++) {
+      // Since i * i is a perfect square and within the number of lockers
+      openLockers.push(i * i);
+  }
+
+  return openLockers;
+}
+
+// Example usage:
+console.log(openLockers(100));  // Output: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
