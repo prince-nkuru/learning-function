@@ -20,3 +20,19 @@ relatively_prime(15, [72, 27, 32, 61, 77, 11, 40])
 relatively_prime(210, [15, 100, 2222222, 6, 4, 12369, 99])
 >> []
 FUNDAMENTALS*/
+
+function relativelyPrime(n, l) {
+  //your code here
+  const arr = [];
+
+    outer: for (const each of l) {
+      for (let i = 2; i <= n; i ++) {
+        if (each % i === 0 && n % i == 0) {
+          continue outer;
+        }
+      }
+      arr.push(each);
+    }
+    return arr;
+
+  }
