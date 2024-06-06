@@ -59,6 +59,12 @@ function mergeStrings(first, second){
 
 // 3
 
+// first solution
 function showMe(yourID){
   return /^[A-Z][a-z]*(-[A-Z][a-z]*)*$/.test(yourID);
 }
+
+// second 
+function showMe(yourID){
+  return /^[a-z-]+$/i.test(yourID);
+  }
