@@ -68,3 +68,11 @@ function showMe(yourID){
 function showMe(yourID){
   return /^[a-z-]+$/i.test(yourID);
   }
+
+  // third way
+
+  function showMe(yourID){
+  
+    return /^[a-z]+(-[a-z]+)*$/i.test(yourID)
+      
+    }
