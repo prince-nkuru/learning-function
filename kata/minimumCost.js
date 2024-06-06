@@ -5,3 +5,6 @@ There are n schools numbered from 1 to n. One can travel between each pair of sc
 
 Range : 1 ≤ n ≤ 106*/
 
+// first
+
+const findJane = n => Math.ceil(n/2)-1;
