@@ -55,3 +55,10 @@ NOTE: The algorithm should always use the longest possible overlap.
 function mergeStrings(first, second){
   return (first + ' ' + second).replace(/(.*) \1/, '$1');
 }
+
+
+// 3
+
+function showMe(yourID){
+  return /^[A-Z][a-z]*(-[A-Z][a-z]*)*$/.test(yourID);
+}
