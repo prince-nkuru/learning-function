@@ -25,3 +25,8 @@ Constraints: 1 ≤ k ≤ 40
 
 The difference between the two types of apples.*/
 
+function appleBoxes(k) {
+  var result = 0;
+  for (let i = 1; i <= k; i++) result += i * i * (i % 2 ? -1 : 1);
+  return result;
+}
