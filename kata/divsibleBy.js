@@ -27,3 +27,10 @@ function divisibleByLast(n) {
   
   return result;
 }
+
+// third
+
+const divisibleByLast = (x) => {
+  let arr = [...x+[]]
+  return [false].concat(arr.slice(1).map((el, i)=> el % arr[i] === 0))
+}
