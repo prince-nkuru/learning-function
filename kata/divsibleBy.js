@@ -14,3 +14,16 @@ Examples
 const divisibleByLast = n => {
   return n.toString().split('').map((el, ind, arr) => el % arr[ind - 1] === 0);
 }
+
+// second solution
+
+function divisibleByLast(n) {
+  n = String(n);
+  var result = [false];
+  
+  for (var i = 1; i < n.length; i++) {
+    result.push(n[i] % n[i - 1] === 0);
+  }
+  
+  return result;
+}
