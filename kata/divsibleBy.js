@@ -8,3 +8,9 @@ Examples
 2026         => [false, true, false, true]
 635          => [false, false, false]
 *** Remember 0 is evenly divisible by all integers but not the other way around ****/
+
+// first solution 
+
+const divisibleByLast = n => {
+  return n.toString().split('').map((el, ind, arr) => el % arr[ind - 1] === 0);
+}
