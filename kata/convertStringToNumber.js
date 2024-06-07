@@ -22,3 +22,15 @@ function toNumberArray(stringarray){
 function toNumberArray(stringarray){
   return stringarray.map(e => +e);
 }
+
+// third sol
+
+function toNumberArray(str){
+  let arr = [];
+  for(let i = 0; i < str.length; i++){
+    arr.push(+str[i]);
+  }
+  return arr;
+}
+// fourth sol
+
