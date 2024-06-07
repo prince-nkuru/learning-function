@@ -16,3 +16,9 @@ function toNumberArray(stringarray){
   
   return stringarray.map(n => parseFloat(n));
 }
+
+// second sol
+
+function toNumberArray(stringarray){
+  return stringarray.map(e => +e);
+}
