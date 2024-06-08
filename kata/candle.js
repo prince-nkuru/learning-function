@@ -20,3 +20,11 @@ function candles(candlesNumber, makeNew) {
   
   
 }
+
+// second sol
+
+function candles(candlesNumber, makeNew, leftOver = 0) {
+  leftOver += candlesNumber
+  if (leftOver < makeNew) return candlesNumber
+  return candlesNumber + candles(Math.floor(leftOver/makeNew), makeNew, leftOver % makeNew)
+}
