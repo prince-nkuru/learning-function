@@ -18,14 +18,23 @@ Output:
 
 function sentence(List) {
   return List
-    .sort((a, b) => Object.keys(a) - Object.keys(b))
-    .map((item) => Object.values(item))
-    .join(' ')
- 
- /*solution with reduce:
- return List
- .sort( (a, b) => Object.keys(a) - Object.keys(b))
- .reduce(((sum, value) => sum += ' ' + Object.values(value)),'')
- .trim()
- */
+  .sort((a, b) => Object.keys(a) - Object.keys(b))
+  .map((item) => Object.values(item))
+  .join(' ')
+
+/*solution with reduce:
+return List
+.sort( (a, b) => Object.keys(a) - Object.keys(b))
+.reduce(((sum, value) => sum += ' ' + Object.values(value)),'')
+.trim()
+*/
 }
+
+// second sol
+const sentence = list => (
+  list
+    .sort((a, b) => Object.keys(a)[0] - Object.keys(b)[0])
+    .map(obj => Object.values(obj)[0])
+    .join(' ')
+);
+
