@@ -38,3 +38,11 @@ const sentence = list => (
     .join(' ')
 );
 
+// third
+
+const sentence = arrayOfObjects =>
+  Object.entries(arrayOfObjects.reduce((acc, val) => ({...acc, ...val}), {}))
+        .sort(([a], [b]) => +a - +b)
+        .map(([, str]) => str)
+        .join` `;
+
