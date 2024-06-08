@@ -13,3 +13,19 @@ List = [
 
 Output:
 'Vatsan took his dog for a spin'*/
+
+// first sol
+
+function sentence(List) {
+  return List
+    .sort((a, b) => Object.keys(a) - Object.keys(b))
+    .map((item) => Object.values(item))
+    .join(' ')
+ 
+ /*solution with reduce:
+ return List
+ .sort( (a, b) => Object.keys(a) - Object.keys(b))
+ .reduce(((sum, value) => sum += ' ' + Object.values(value)),'')
+ .trim()
+ */
+}
