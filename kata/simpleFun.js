@@ -47,3 +47,17 @@ function appleBoxes(k) {
     return evenArr.reduce((acc, curr) => {return acc + curr}, 0) - oddArr.reduce((acc, curr) => {return acc + curr}, 0)
     
   }
+
+  // third solution
+
+  function appleBoxes(k) {
+    let redApples = 0;
+    let yellowApples = 0;
+  
+    for(let i = 0; i <= k; i++) {
+      i % 2 === 0 ? redApples += i ** 2 : yellowApples += i ** 2
+    }
+  
+    return redApples - yellowApples;
+    
+  }
