@@ -30,3 +30,20 @@ function appleBoxes(k) {
   for (let i = 1; i <= k; i++) result += i * i * (i % 2 ? -1 : 1);
   return result;
 }
+
+// second 
+function appleBoxes(k) {
+  let evenArr = [];
+  let oddArr = [];
+    if(k >= 1 && k <= 40){
+      for (let i =0; i <= k; i++){
+        if (i % 2 === 0){
+          evenArr.push( i * i)
+        }else if (i % 2 != 0) {
+          oddArr.push(i * i)
+        }
+      }
+    }
+    return evenArr.reduce((acc, curr) => {return acc + curr}, 0) - oddArr.reduce((acc, curr) => {return acc + curr}, 0)
+    
+  }
