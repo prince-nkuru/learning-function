@@ -28,3 +28,9 @@ function candles(candlesNumber, makeNew, leftOver = 0) {
   if (leftOver < makeNew) return candlesNumber
   return candlesNumber + candles(Math.floor(leftOver/makeNew), makeNew, leftOver % makeNew)
 }
+
+// third sol
+
+function candles(c, m) {
+  return Math.ceil(c * (m/(m-1))) - 1;
+}
