@@ -29,3 +29,16 @@ function findGlasses(arr){
 function findGlasses(arr){
   return arr.findIndex(e => /O-+O/.test(e));
 }
+
+// third
+
+function findGlasses(arr){
+  const glassesRegex = /O-{1,}O/g;
+  
+  for (let i = 0 ; i < arr.length; i++){
+    if (glassesRegex.test(arr[i])){
+      return i
+    }
+  }
+}
+ 
