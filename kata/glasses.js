@@ -14,3 +14,12 @@ Examples
 Notes
 All lists will include one valid pair of glasses because I swear I dropped them around here somewhere ...
 All elements in the list are strings.*/
+
+
+function findGlasses(arr){
+  for (let i = 0; i < arr.length; i++){
+    if(/O[-]+O/g.test(arr[i])){
+      return i;
+    }
+  }
+}
