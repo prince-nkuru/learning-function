@@ -20,3 +20,8 @@ var isAnagram = function(test, original) {
     return false;
   }
 };
+
+// second sol
+function isAnagram (test, original) {
+	return test.toLowerCase().split("").sort().join("") === original.toLowerCase().split("").sort().join("");
+}
