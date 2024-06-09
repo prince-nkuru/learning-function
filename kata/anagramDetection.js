@@ -25,3 +25,11 @@ var isAnagram = function(test, original) {
 function isAnagram (test, original) {
 	return test.toLowerCase().split("").sort().join("") === original.toLowerCase().split("").sort().join("");
 }
+
+// final
+
+// write the function isAnagram
+var isAnagram = function(test, original) {
+  if(test.length !== original.length) { return false }
+  return [...test.toLowerCase()].sort().join("") === [...original.toLowerCase()].sort().join("")
+};
