@@ -47,3 +47,22 @@ function rpsls(pl1, pl2) {
   else
       return 'Player 2 Won!'
 }
+
+// easy way
+
+function rpsls(p1,p2){
+  if ((p1=="rock" && p2=="lizard") 
+      ||(p1=="paper" && p2=="rock") 
+      ||(p1=="scissors" && p2=="lizard") 
+      ||(p1=="lizard" && p2=="paper")
+      ||(p1=="paper" && p2=="spock")
+      ||(p1=="rock" && p2=="scissors")
+      ||(p1=="lizard" && p2=="spock")
+      ||(p1=="scissors" && p2=="paper")
+      ||(p1=="spock" && p2=="scissors")
+      ||(p1=="spock" && p2=="rock"))
+    return "Player 1 Won!";
+  if (p1==p2)
+    return "Draw!"
+  return "Player 2 Won!";
+}
