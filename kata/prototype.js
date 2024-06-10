@@ -13,3 +13,9 @@ String.prototype.reverse = function(){
 String.prototype.reverse = function(){
   return this.length ? this.substring(1).reverse() + this.charAt(0) : "";
 }
+
+// third solution
+
+String.prototype.reverse = function() {
+  return this.split('').reduceRight((acc, val) => acc + val,'')
+}
