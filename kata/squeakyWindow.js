@@ -22,3 +22,13 @@ More examples:
 (nums = [1, 2, 3, 4], k = 3) ---> [3, 4]
 (nums = [1, 2, 3, 4], k = 4) ---> [4]
 (nums = [1, 2, 3, 4], k = 5) ---> [] because k is larger than the length of nums*/
+
+function sliding(nums, k) {
+	k--;
+  return nums.reduce((t,x,i)=>{
+   if(i>=k){
+     t.push(Math.max(...nums.slice(i-k,i+1)));
+   }
+   return t;
+  },[]);
+}
