@@ -2,3 +2,7 @@
 
 "String".reverse();// => returns "gnirtS"
 "Super awesome string".reverse();// => returns "gnirts emo*/
+
+String.prototype.reverse = function(){
+  return this.split('').reverse().join(''); 
+}
