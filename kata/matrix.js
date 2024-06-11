@@ -28,3 +28,23 @@ var rotateMatrix = arr => {
   }
   return rotated;
 }
+
+// second question
+
+function sumOfN(n) {
+  
+  let sum = 0;
+  let arr = [];
+  
+  for ( let i = 0; i < Math.abs(n) + 1; i++){
+    if (n > 0){
+      sum += i;
+    arr.push(sum)
+    }else {
+      sum += i * -1;
+      arr.push(sum);
+    }
+    
+  }
+  return arr;
+}
