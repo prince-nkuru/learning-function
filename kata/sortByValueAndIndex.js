@@ -84,3 +84,23 @@ The possible bonus amount of each team can be:[1,2,1,2]
 For scores = [20,30,10,30,40,10,20,30,40,30], the output should be 20.
 
 The possible bonus amount of each team can be:[1,2,1,2,3,1,2,3,4,1] */
+
+// sol
+
+function minimumBonus(scores){
+	let bonuses = Array(scores.length).fill(1);
+
+	scores.forEach((score, i) => {
+			if (i > 0 && score > scores[i - 1]) {
+					bonuses[i] = bonuses[i - 1] + 1;
+			}
+	});
+
+	for (let i = scores.length - 2; i >= 0; i--) {
+			if (scores[i] > scores[i + 1]) {
+					bonuses[i] = Math.max(bonuses[i], bonuses[i + 1] + 1);
+			}
+	}
+	const totalBonuses = bonuses.reduce((sum, bonus) => sum + bonus, 0);
+	return totalBonuses;
+}
