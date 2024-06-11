@@ -25,3 +25,10 @@ Have fun coding it and please don't forget to vote and rank this kata! :-)
 I have also created other katas. Take a look if you enjoyed this kata!
 
 ARRAYS*/
+
+function sortByValueAndIndex(array) {
+  return array
+		.map((x, i) => [x, x * i + x])
+		.sort((a, b) => a[1] - b[1])
+		.map((a) => a[0])
+}
