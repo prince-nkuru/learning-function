@@ -32,3 +32,9 @@ function sortByValueAndIndex(array) {
 		.sort((a, b) => a[1] - b[1])
 		.map((a) => a[0])
 }
+
+// sol
+
+function sortByValueAndIndex(array){
+  return array.map((num, i) => [num, i + 1]).sort((a, b) => (a[0] * a[1]) - (b[0] * b[1])).map(([num]) => num);
+}
