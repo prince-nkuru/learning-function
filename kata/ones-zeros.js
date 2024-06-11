@@ -18,3 +18,9 @@ However, the arrays can have varying lengths, not just limited to 4.*/
 const binaryArrayToNumber = arr => {
   return parseInt(arr.join(''), 2);
 };
+
+//
+
+const binaryArrayToNumbers = arr => {
+  return arr.reduce((total, cur) => (total = total * 2 + cur), 0);
+}
