@@ -20,3 +20,19 @@ Minimum number of taxis is a harder version, because the lists are bigger.
 
 The Hotel with Infinite Rooms
 Is room reserved?*/
+
+function allocateRooms(customers) {
+  customers = customers.map((x, i) => [i, x]).sort((a, b) => a[1][0] - b[1][0]);
+  const res = [];
+  const rooms = [];
+
+  for (const [ri, cust] of customers) {
+    let r = rooms.findIndex((room, i) => room < cust[0]);
+    if (r === -1) r = rooms.length;
+
+    rooms[r] = cust[1];
+    res[ri] = r+1;
+  }
+
+  return res;
+}
