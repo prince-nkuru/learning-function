@@ -51,3 +51,22 @@ const allocateRooms = (durations, middle = []) => durations.map((duration, i) =>
         middle[increment ? (++index) : index] = [...(increment ? [] : middle[index]), duration[0]];
         return [index + 1, duration[1]];
     }).sort((prev, cur) => prev[1] - cur[1]).map(cur => cur[0]);
+
+    // 3
+
+    function allocateRooms(customers) {
+      let sortedCustomers = [...customers].map((c,i)=>(c[2] = i,c)).sort((a,b) => (a[0] - b[0]) || (a[1] - b[1]));
+      let rooms = [];
+      let allocations = Array.from({length: customers.length}, () => 0);
+      customer : for(let [arrival, departure, index] of sortedCustomers) {
+        for(let i = 0; i < rooms.length; ++i)
+          if(rooms[i] < arrival) {
+            rooms[i] = departure;
+            allocations[index] = i + 1;
+            continue customer;
+          }
+        rooms.push(departure);
+        allocations[index] = rooms.length;
+      }
+      return allocations;
+    }
