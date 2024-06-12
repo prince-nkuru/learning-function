@@ -36,3 +36,18 @@ function allocateRooms(customers) {
 
   return res;
 }
+
+// 2
+
+const allocateRooms = (durations, middle = []) => durations.map((duration, i) => [duration, i])
+    .sort((prev, cur) => prev[0][0] - cur[0][0] || cur[0][1] - prev[0][1])
+    .map(duration => {
+        let index = -1;
+        const increment = middle.every((_, i, origin) => {
+            const cur = origin[(index = i)],
+                last = cur[cur.length - 1];
+            return duration[0][0] <= last[1];
+        });
+        middle[increment ? (++index) : index] = [...(increment ? [] : middle[index]), duration[0]];
+        return [index + 1, duration[1]];
+    }).sort((prev, cur) => prev[1] - cur[1]).map(cur => cur[0]);
