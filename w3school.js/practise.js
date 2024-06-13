@@ -72,3 +72,15 @@ const max = people.reduce((acc, curr) => {
   }
 })
 console.log(max);
+
+// finding occurences of each color in an array
+
+const colors = ['green', 'green', 'red','blue','red', 'red'];
+
+let res = colors.reduce((acc, color) => {
+  acc[color] = (acc[color] || 0) + 1;
+
+  return acc;
+}, {})
+
+console.log(res);
