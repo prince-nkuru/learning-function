@@ -44,6 +44,8 @@ function Person(first, last, age, eye) {
   this.eyeColor = eye;
 }
 
+// prototype is used to add any property to constructor.
+
 Person.prototype.name = function() {
   return this.firstName + " " + this.lastName
 };
