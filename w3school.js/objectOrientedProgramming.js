@@ -35,3 +35,19 @@ const mySelf = new Person("Johnny", "Rally", 22, "green");
 
 console.log(myFather.age)
 
+// prototype
+
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+Person.prototype.name = function() {
+  return this.firstName + " " + this.lastName
+};
+
+const myFather2 = new Person("John", "Doe", 50, "blue");
+console.log(myFather2.name());
+
