@@ -5,3 +5,24 @@ let maped = arr
             .filter(t => t.value >= 6)
             .map(n => n.value)
             console.log(maped);
+
+
+            // reduce method
+
+  const materials = [
+    {
+      name :'bricks',
+      cost :2000
+    }, 
+    {
+      name : 'wood',
+      cost : 3000
+    }
+  ]          
+
+  let result = materials.reduce((acc, curr) => {
+   
+     return acc + curr.cost;
+  },0)
+
+  console.log(result);
