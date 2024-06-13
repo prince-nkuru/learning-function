@@ -45,3 +45,30 @@ let maped = arr
   }, {})
 
   console.log(final);
+
+  // 4th exercise
+// finding maximum and minimum
+
+const people = [
+  {
+ name: 'prince',
+ price: 1000
+  },
+  {
+name: 'levis',
+price: 1400
+  },
+  {
+name: 'Fab',
+price: 700
+  }
+]
+
+const max = people.reduce((acc, curr) => {
+  if (curr.price < acc){
+    return curr.price;
+  } else {
+    return acc.price;
+  }
+})
+console.log(max);
