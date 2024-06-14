@@ -55,7 +55,7 @@ const myFather2 = new Person("John", "Doe", 50, "blue");
 console.log(myFather2.name());
 
 
-   // object.assign method
+   // object.assign method is used to add object into another object. or making copy of it.
 
    const course = {
     name: 'programming language',
@@ -68,3 +68,8 @@ console.log(myFather2.name());
 
    const results = Object.assign(course, grade);
    console.log(results);
+
+   // making copy of object 
+
+   const clone = Object.assign({}, results);
+   console.log(clone);
