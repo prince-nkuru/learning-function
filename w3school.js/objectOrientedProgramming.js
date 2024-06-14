@@ -45,6 +45,7 @@ function Person(first, last, age, eye) {
 }
 
 // prototype is used to add any property to constructor.
+// if prototype value is changed, all new created object will have that value, but previous object will have prev value
 
 Person.prototype.name = function() {
   return this.firstName + " " + this.lastName
@@ -53,3 +54,17 @@ Person.prototype.name = function() {
 const myFather2 = new Person("John", "Doe", 50, "blue");
 console.log(myFather2.name());
 
+
+   // object.assign method
+
+   const course = {
+    name: 'programming language',
+
+   }
+   
+   const grade = {
+    score: 92
+   }
+
+   const results = Object.assign(course, grade);
+   console.log(results);
