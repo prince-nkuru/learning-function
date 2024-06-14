@@ -73,3 +73,14 @@ console.log(myFather2.name());
 
    const clone = Object.assign({}, results);
    console.log(clone);
+
+   // object.entries() is used in converting object to dimensional arrays
+
+   const ent = {
+    name: 'prince',
+    age: 24
+   }
+
+   console.log(Object.entries(ent));
+
+
