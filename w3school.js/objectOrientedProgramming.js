@@ -81,6 +81,14 @@ console.log(myFather2.name());
     age: 24
    }
 
-   console.log(Object.entries(ent));
+   //console.log(Object.entries(ent));
+
+   // it is also used to loop easily into an object
+
+
+   for (const [key, value] of Object.entries(ent)){
+    console.log(`key => ${key[0]} | value => ${value[0]}`);
+   }
+
 
 
