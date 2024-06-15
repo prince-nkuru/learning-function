@@ -46,3 +46,12 @@ function handOutGift(name) {
   if (names[name]) throw "Error";
   names[name] = true;
 }
+
+// third version of code"
+var handOutGift = (function() {
+  var list = [];
+  return function(name) {
+    if(list.includes(name))throw new 'You\'ve already got a gift';
+    else list.push(name);
+  }
+})();
