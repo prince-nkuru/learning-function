@@ -27,3 +27,13 @@ handOutGift("Alison");
 handOutGift("John");
 handOutGift("Maria");
 handOutGift("Peter"); // <-- must throw an error*/
+
+let arr = [];
+function handOutGift(name) {
+  
+  if (arr.indexOf(name) !== -1){
+        throw new Error();
+    }else{
+      arr.push(name);
+    }
+  }
