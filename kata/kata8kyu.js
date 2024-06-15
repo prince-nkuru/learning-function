@@ -37,3 +37,12 @@ function handOutGift(name) {
       arr.push(name);
     }
   }
+
+  // second version of answer
+
+  var names = {};
+
+function handOutGift(name) {
+  if (names[name]) throw "Error";
+  names[name] = true;
+}
