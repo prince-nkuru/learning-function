@@ -90,9 +90,9 @@ console.log(myFather2.name());
     console.log(`key => ${key[0]} | value => ${value[0]}`);
    }
 
-   // JavaScript Object.fromEntries()
+   // JavaScript Object.fromEntries();
 
-   // 1. lets you convert maps into an object, 2. lets you convrt an iterable into an object
+   // 1. lets you convert maps into an object, 2. lets you convert an iterable (key value pair)into an object
 
  const myMap = new Map();
  myMap.set('name', 'prince');
@@ -100,3 +100,14 @@ console.log(myFather2.name());
 
  const obj = Object.fromEntries(myMap);
  console.log(obj);
+
+ // object.keys() method
+
+ const key = {
+  active : true,
+  id : 252,
+  hobbies: 'walking'
+ }
+
+ const resu = Object.keys(key);
+ console.log(resu);
