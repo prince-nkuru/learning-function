@@ -55,3 +55,9 @@ var handOutGift = (function() {
     else list.push(name);
   }
 })();
+
+// fourth version
+
+const handOutGift =
+  ((arr = []) => name => arr.includes(name) ? (() => {throw new Error()})() : arr.push(name))
+  ();
