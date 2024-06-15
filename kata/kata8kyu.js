@@ -75,3 +75,9 @@ Example #2: An input of 765 will/should return 493625 because 72 is 49, 62 is 36
 Note: The function accepts an integer and returns an integer.
 
 Happy Coding!*/
+
+function squareDigits(num){
+  let arr = num.toString().split('');
+  
+  return Number(arr.map(n => Number(n) ** 2).join(''));
+}
