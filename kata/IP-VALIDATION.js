@@ -32,3 +32,10 @@ const isValidIP = (str) => /^((\d|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])\.){3}(\d|[1-9
 function isValidIP(string) {
   return string.split('.').filter((v)=>{return v == Number(v).toString() && Number(v)<256 && Number(v) >= 0}).length==4;
 }
+// last option
+function isValidIP(str) {
+  const validIP = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/gi;
+
+  return validIP.test(str);
+ 
+  }
