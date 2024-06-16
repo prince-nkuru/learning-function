@@ -22,3 +22,7 @@ function isValidIP(str) {
  function isValidIP(str) {
   return str.split('.').filter(function(v) {return +v <= 255 && +v >= 0 && v.length == String(+v).length;}).length == 4;
 }//I love one-liners
+
+// third sol
+
+const isValidIP = (str) => /^((\d|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])\.){3}(\d|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])$/.test(str);
