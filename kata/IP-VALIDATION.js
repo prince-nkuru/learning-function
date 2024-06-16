@@ -17,3 +17,8 @@ Inputs are guaranteed to be a single string*/
 function isValidIP(str) {
   return /^(([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])(\.(?!$)|$)){4}$/.test(str);
 }
+
+ // second sol
+ function isValidIP(str) {
+  return str.split('.').filter(function(v) {return +v <= 255 && +v >= 0 && v.length == String(+v).length;}).length == 4;
+}//I love one-liners
