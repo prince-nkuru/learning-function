@@ -109,5 +109,5 @@ console.log(myFather2.name());
   hobbies: 'walking'
  }
 
- const resu = Object.keys(key);
+ const resu = Object.keys(key); // Object.values(key) to get array of values
  console.log(resu);
