@@ -111,3 +111,34 @@ console.log(myFather2.name());
 
  const resu = Object.keys(key); // Object.values(key) to get array of values
  console.log(resu);
+
+
+
+ /************************************************************/
+     // INHERITANCE
+ /************************************************************/
+
+   class Person {
+    constructor(name) {
+       this.name = name;
+       }
+       toString(){
+        return `name of person is ${this.name}`
+       }
+   }
+
+   class student extends Person {
+    constructor(name, id){
+      super(name);
+      this.id = id;
+
+      }
+
+      toString() {
+        return (`${super.toString()},
+        Student ID: ${this.id}`);
+    }
+   }
+   let student1 = new student('Mukul', 22);
+   console.log(student1.toString());
+
