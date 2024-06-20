@@ -32,6 +32,33 @@ function operate(pcSet, operation) {
   return (inversion) ? result.map( p => (12 - p + n) % 12 ).sort( (a,b) => a-b) : result.map( p => (p + n) % 12 ).sort( (a,b) => a-b);
 }
 
+/*Given integers a and b, determine whether the following pseudocode results in an infinite loop
+
+ while (a !== b){
+     a++
+     b--
+ }
+Assume that the program is executed on a virtual machine which can store arbitrary long numbers and execute forever.
+
+Example
+For a = 2 and b = 6, the output should be
+
+isInfiniteProcess(a, b) = false (or equivalent in PHP)
+
+For a = 2 and b = 3, the output should be
+
+isInfiniteProcess(a, b) = true (or equivalent in PHP)
+
+Input/Output
+[input] integer a
+Constraints: 0 ≤ a ≤ 100.
+
+[input] integer b
+Constraints: 0 ≤ b ≤ 100.
+
+[output] a boolean value
+true if the pseudocode will never stop, false otherwise.*/
+
 
 
 function isInfiniteProcess(a, b) {
