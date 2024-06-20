@@ -31,7 +31,7 @@ function operate(pcSet, operation) {
   
   return (inversion) ? result.map( p => (12 - p + n) % 12 ).sort( (a,b) => a-b) : result.map( p => (p + n) % 12 ).sort( (a,b) => a-b);
 }
-
+  /**********************************************************************************************************/
 /*Given integers a and b, determine whether the following pseudocode results in an infinite loop
 
  while (a !== b){
@@ -64,3 +64,16 @@ true if the pseudocode will never stop, false otherwise.*/
 function isInfiniteProcess(a, b) {
   return a > b || (b - a) % 2 !== 0;
 }
+
+
+// second answer
+
+function isInfiniteProcess(a, b) {
+  while (a < b){
+     a++
+     b--
+  }
+  return a !== b;
+}
+
+/**********************************************************************************************************/
