@@ -31,3 +31,9 @@ function operate(pcSet, operation) {
   
   return (inversion) ? result.map( p => (12 - p + n) % 12 ).sort( (a,b) => a-b) : result.map( p => (p + n) % 12 ).sort( (a,b) => a-b);
 }
+
+
+
+function isInfiniteProcess(a, b) {
+  return a > b || (b - a) % 2 !== 0;
+}
