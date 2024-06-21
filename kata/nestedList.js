@@ -63,3 +63,24 @@ console.log(groupInts([1, 0], 0)); // [[1, 0]]
 console.log(groupInts([1, 0, -1, 5], 0)); // [[1, 0], [-1], [5]]
 console.log(groupInts([1, 0, -1, 5], 5)); // [[1, 0, -1], [5]]
 console.log(groupInts([], 5)); // []
+
+
+function groupInts(xs,x) {
+  if (xs == []) {
+    return []
+  }
+  let target = 0
+  const results = []
+  
+  xs.forEach((v, i, a) => {
+    if (i == 0) {
+      results.push([v])
+    } else if ((v < x) === (a[i-1] < x)) {
+      results[target].push(v)
+    } else {
+      target++
+      results.push([v])
+    }
+  })
+  return results;
+}
