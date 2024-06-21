@@ -84,3 +84,19 @@ function groupInts(xs,x) {
   })
   return results;
 }
+
+function groupInts(list, key) {
+  const result = [];
+  for (let i = 0; i < list.length; i++) {
+    const lastEntry = result.at(-1);
+    if (
+      (list[i] < key && lastEntry?.[0] < key) ||
+      (list[i] >= key && lastEntry?.[0] >= key)
+    ) {
+      lastEntry.push(list[i]);
+    } else {
+      result.push([list[i]]);
+    }
+  }
+  return result;
+}
