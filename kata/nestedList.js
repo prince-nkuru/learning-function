@@ -29,3 +29,37 @@
 
 // group_ints([1, 0, -1, 5], key= 5) 
 // --> [[1, 0, -1], [5]]
+
+
+function groupInts(arr, key) {
+  if (arr.length === 0) return [];
+  
+  let result = [];
+  let currentGroup = [];
+  let isCurrentGroupLessThanKey = arr[0] < key;
+  
+  for (let num of arr) {
+    if (num < key && isCurrentGroupLessThanKey) {
+      currentGroup.push(num);
+    } else if (num >= key && !isCurrentGroupLessThanKey) {
+      currentGroup.push(num);
+    } else {
+      result.push(currentGroup);
+      currentGroup = [num];
+      isCurrentGroupLessThanKey = num < key;
+    }
+  }
+  
+  if (currentGroup.length > 0) {
+    result.push(currentGroup);
+  }
+  
+  return result;
+}
+
+// Test cases
+console.log(groupInts([1, 1, 1, 0, 0, 6, 10, 5, 10], 6)); // [[1, 1, 1, 0, 0], [6, 10], [5], [10]]
+console.log(groupInts([1, 0], 0)); // [[1, 0]]
+console.log(groupInts([1, 0, -1, 5], 0)); // [[1, 0], [-1], [5]]
+console.log(groupInts([1, 0, -1, 5], 5)); // [[1, 0, -1], [5]]
+console.log(groupInts([], 5)); // []
