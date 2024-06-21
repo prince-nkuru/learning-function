@@ -100,3 +100,23 @@ function groupInts(list, key) {
   }
   return result;
 }
+
+function groupInts(input, key) {
+  
+  let resultArray = []
+  let groupArray = []
+  
+  let isBigger = true
+  
+  for(let i = 0; i < input.length; i++) {
+    // is item smaller or equal to the key? Yes, ask next item. No, push to new array.
+  groupArray.push(input[i])
+    
+  if(input[i] < key && input[i + 1] >= key || input[i] >= key && input[i+1] < key || i === input.length - 1) {
+    resultArray.push(groupArray);
+    groupArray = []
+  }
+  }
+
+  return resultArray
+}
