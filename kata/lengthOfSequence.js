@@ -28,3 +28,24 @@ var lengthOfSequences = function (arr, n) {
 
   return result.length;
 };
+
+//final 
+var lengthOfSequence2 = function (arr, n)
+{
+  var indicies = [];
+  for(i=0; i<arr.length; i++)
+  {
+    if(arr[i] === n)
+    {
+      indicies[indicies.length] = i;
+    }
+  }
+  if(indicies.length === 2)
+  {
+    return indicies[1] - indicies[0] + 1;
+  }
+  else
+  {
+    return 0;
+  }
+};
