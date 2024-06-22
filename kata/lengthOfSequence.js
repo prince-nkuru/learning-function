@@ -6,3 +6,7 @@
 // For sake of simplicity, there will only be numbers (positive or negative) in the supplied array.
 
 // If there are less or more than two occurrences of the number to search for, return 0.
+
+var lengthOfSequence = function (arr, n) {
+  return arr.slice(arr.indexOf(n), (arr.lastIndexOf(n) + 1)).length;
+};
