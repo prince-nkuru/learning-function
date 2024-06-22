@@ -28,3 +28,13 @@ function onlyDuplicates(str) {
 // third way
 
 var onlyDuplicates = s => s.replace(/./g,c => s.indexOf(c)==s.lastIndexOf(c) ? '' : c);
+
+// fourth 
+
+String.prototype.isDuplicate = function(char){
+  return this.split(char).length>2;
+}
+
+function onlyDuplicates(str) {
+  return [...str].filter(s=>str.isDuplicate(s)).join``;
+}
