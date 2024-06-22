@@ -9,3 +9,22 @@
 
 const lengthOfSequence = (arr, n) =>
   arr.filter(val => val === n).length === 2 ? arr.lastIndexOf(n) - arr.indexOf(n) + 1 : 0;
+
+//second
+
+var lengthOfSequences = function (arr, n) {
+ 
+  var first = arr.indexOf(n);
+  var second = arr.indexOf(n,first +1);
+  var third = arr.indexOf(n,second +1);
+  var result = []
+  
+  if (first < 0 || third > 0) {
+    return 0
+  }
+  for (var i = first; i<=second ;i++) {
+      result.push(arr[i])
+  }
+
+  return result.length;
+};
