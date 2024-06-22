@@ -24,3 +24,7 @@ return arr.join('');
 function onlyDuplicates(str) {
   return str.split('').filter(e => str.indexOf(e) != str.lastIndexOf(e)).join('')
 }
+
+// third way
+
+var onlyDuplicates = s => s.replace(/./g,c => s.indexOf(c)==s.lastIndexOf(c) ? '' : c);
