@@ -7,6 +7,5 @@
 
 // If there are less or more than two occurrences of the number to search for, return 0.
 
-var lengthOfSequence = function (arr, n) {
-  return arr.slice(arr.indexOf(n), (arr.lastIndexOf(n) + 1)).length;
-};
+const lengthOfSequence = (arr, n) =>
+  arr.filter(val => val === n).length === 2 ? arr.lastIndexOf(n) - arr.indexOf(n) + 1 : 0;
