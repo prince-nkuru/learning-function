@@ -6,3 +6,9 @@
 // Examples
 // ["abc:123", "cde:456"]  -->  ["abc:456", "cde:123"]
 // ["a:12345", "777:xyz"]  -->  ["a:xyz", "777:12345"]
+
+function tailSwap(arr) {
+  let newArr = arr
+  .map(string => string.split(':'))
+  return [newArr[0][0]+':'+newArr[1][1], newArr[1][0]+':'+newArr[0][1]];
+}
