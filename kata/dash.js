@@ -9,3 +9,11 @@
 function dashatize(num) {
   return isNaN(num) ? 'NaN' : num.toString().match(/([13579]|[02468]+)/g).join('-');
 };
+// second 
+
+function dashatize(num) {
+  return num = num.toString().split("").map(function(c){
+    return c % 2 ? "-" + c + "-" :  c ;
+  }).join("").split("-").filter(a => a != "").join("-");
+  
+};
