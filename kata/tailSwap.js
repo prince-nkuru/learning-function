@@ -30,3 +30,15 @@ function tailSwap(arr) {
   return [`${a[0]}:${b[1]}`, `${b[0]}:${a[1]}`]
   
 }
+
+// fourth
+
+function tailSwap(arr) {
+  var c=[];
+  var ar=[];
+  for (var i=0; i<arr.length; ++i)
+    c.push(arr[i].split(':'));
+  for (var i=0; i<c.length; ++i)
+    ar.push(c[i][0]+':'+c[c.length-1-i][1]);
+  return ar;
+}
