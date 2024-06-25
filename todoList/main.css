@@ -42,3 +42,94 @@ input,button{
   outline: none;
   border: none;
 }
+#new-task-input {
+  flex: 1 1 0%;
+  padding: 1rem;
+  background-color: var(--darkest);
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: var(--light);
+  font-size: 1.25rem;
+}
+
+#new-task-input::placeholder{
+  color: var(--gray);
+}
+#new-task-submit {
+  color: var(--pink);
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip: text;       /*new style*/
+  -webkit-text-fill-color: transparent;
+  cursor: pointer
+  transition 0.4s;
+}
+#new-task-submit:hover{
+  opacity: 0.8;
+}
+#new-task-submit:active{
+  opacity: 0.67;
+}
+main {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+.task-list {
+  padding: 1rem;
+}
+
+.task-list h2 {
+  font-size: 1.5rem;
+  color: var(--gray);
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+#tasks .task {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--darkest);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+#tasks .task .content .text {
+  color: var(--light);
+  width: 100%;
+  font-size: 1.125rem;
+  display: block;
+  transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only){   /*when you remove read only , it change color to pink*/
+  color: var(--pink);
+}
+
+#tasks .task .action {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+.task .action button{
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.task .action button:hover{
+  opacity: 0.8;
+}
+.task .action button:active{
+  opacity: 0.6;
+}
+.task .action .edit{
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip: text;       /*new style*/
+  -webkit-text-fill-color: transparent;
+}
+.task .action .delete{
+  color: crimson;
+}
