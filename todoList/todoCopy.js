@@ -12,7 +12,7 @@ function renderTodoList(){
   `<p>
   ${todo} 
   <button onclick = "
-  todoList.splice(${i}, 1)
+  todoList.splice(${i}, 1)  /* adding functionality to add button*/
   renderTodoList();
   
   ">delete</button>
