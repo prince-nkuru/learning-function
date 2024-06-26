@@ -72,5 +72,9 @@ form.addEventListener('submit', (e) => {
     }
   })
 
+  task_delete_el.addEventListener('click', () => {
+    list_el.removeChild(task_el);
+  })
+
 })
 })
