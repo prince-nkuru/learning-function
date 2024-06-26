@@ -28,3 +28,27 @@ function score( dice ) {
     return s + (x >= 3? tdr[i] : 0) + sdr[i]*(x % 3);
   },0);
 }
+
+
+// second sol
+
+function score( dice ) {
+  var score = [0, 0, 0, 0, 0, 0];
+
+  dice.forEach(function(die) {
+    ++score[die - 1];
+  });
+
+  return score.reduce(function(total, n, i) {
+    switch (i + 1) {
+      case 1:
+        return total + (Math.floor(n / 3) * 1000) + ((n % 3) * 100);
+
+      case 5:
+        return total + (Math.floor(n / 3) * 500) + ((n % 3) * 50);
+
+      default:
+        return total + (Math.floor(n / 3) * (i + 1) * 100);
+    }
+  }, 0);
+}
