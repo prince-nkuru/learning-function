@@ -43,6 +43,8 @@ function combat(health, damage) {
   return health - damage > 0 ? health - damage : 0
 }
 
+// kata
+
 // DESCRIPTION:
 // Happy Holidays fellow Code Warriors!
 // It's almost Christmas Eve, so we need to prepare some milk and cookies for Santa! Wait... when exactly do we need to do that?
@@ -56,3 +58,10 @@ function combat(health, damage) {
 // timeForMilkAndCookies(new Date(2013, 11, 24))  // true
 // timeForMilkAndCookies(new Date(2013, 0, 23))   // false
 // // timeForMilkAndCookies(new Date(3000, 11, 24))  // true
+
+
+function timeForMilkAndCookies(date){
+  return Number(date.getMonth() )+ 1 === 12 && date.getDate()  == 24
+  
+  
+}
