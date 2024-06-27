@@ -33,3 +33,8 @@ let mostLikely = function (prob1, prob2) {
       return false
   }
 }
+
+
+//extra question
+
+// Create a combat function that takes the player's current health and the amount of damage recieved, and returns the player's new health. Health can't be less than 0.
