@@ -6,3 +6,10 @@
 // So:
 
 // Input: ('1:3','1:2') - returns false as 1 in 3 is less likely than 1 in 2.
+
+function mostLikely(prob1,prob2){
+  let [a, b] = prob1.split(':');
+  let [c, d] = prob2.split(':');
+  
+  return a/b > c/d;
+}
