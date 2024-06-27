@@ -19,3 +19,17 @@ function mostLikely(prob1,prob2){
 function mostLikely(prob1,prob2){
   return prob1.split(':').reduce( (a,b) =>a/b ) > prob2.split(':').reduce( (a,b) =>a/b );
 }
+
+// third sol
+
+let mostLikely = function (prob1, prob2) {
+  let probNumbers1 = prob1.split(':')
+  let probNumbers2 = prob2.split(':')
+  probNumbers1 = probNumbers1[0] / probNumbers1[1]
+  probNumbers2 = probNumbers2[0] / probNumbers2[1]
+  if (probNumbers1 > probNumbers2) {
+      return true
+  } else {
+      return false
+  }
+}
