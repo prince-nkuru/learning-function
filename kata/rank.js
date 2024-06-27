@@ -7,3 +7,8 @@
 
 // // because there is one 1st place value, a five-way tie for 2nd place, and one in 7th place.
 
+function ranks(a) {
+  let b = a.slice();
+  b.sort((a, b) => b - a);
+  return a.map((n) => b.indexOf(n) + 1);
+}
