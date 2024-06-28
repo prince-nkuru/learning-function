@@ -18,3 +18,24 @@
 // In the second round, 7 beats 5 and Steve gets his second point.
 // In the third round, 9 beats 8 and Josh gets one point.
 // So you should return: "Steve wins 2 to 1"
+
+function winner(deckSteve, deckJosh) {
+  let arr = ['2','3','4','5','6','7','8','9','T','J','Q','K','A'];
+  let steveCount = 0;
+  let joshCount = 0;
+  
+  for (let i = 0; i < deckSteve.length; i++){
+    if( arr.indexOf(deckSteve[i]) > arr.indexOf(deckJosh[i])){
+      steveCount++;
+    } else if (arr.indexOf(deckSteve[i]) < arr.indexOf(deckJosh[i])){
+      joshCount++;
+    }
+  }
+  if(steveCount > joshCount){
+    return `Steve wins ${steveCount} to ${joshCount}`
+  }else if (steveCount < joshCount){
+    return `Josh wins ${joshCount} to ${steveCount}`
+  } else {
+    return 'Tie'
+  }
+}
