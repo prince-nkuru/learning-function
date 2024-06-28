@@ -36,3 +36,13 @@ function high(x){
   
   return highestScoreWord;
 }
+
+//best
+
+function high(x){
+  const alpha = 'abcdefghijklmnopqrstuvwxyz'
+  const words = x.split(' ')
+  const scores = words.map(x => [...x].map(y => alpha.indexOf(y) + 1)).map(x => x.reduce((a,b) => a + b,0))
+  
+  return words[scores.indexOf(Math.max(...scores))]
+}
