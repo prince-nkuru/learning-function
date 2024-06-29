@@ -43,3 +43,10 @@ const countFeelings=(a,b,c=a=>a.split``.reduce((a,b)=>(a[b]=(a[b]||0)+1)&&a,{}),
   const res=b.map(a=>Object.entries(c(a)).map(([a,b])=>[a,d[a]||0/b])).map(a=>a.every(a=>a[1]>0)?1:0).reduce((a,b)=>a+b);  
   return `${res} feeling${res==1?'':'s'}.`
 }
+
+//////////////////
+
+function countFeelings(string, array) {
+  var result=array.filter(x=>x.split("").every(y=>string.includes(y))).length;
+  return result===1?"1 feeling.":result+" feelings.";
+}
