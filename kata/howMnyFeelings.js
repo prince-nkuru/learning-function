@@ -36,3 +36,10 @@ function countFeelings(string, array) {
   
   return count == 1 ? `${count} feeling.` : `${count} feelings.`; 
 }
+
+// sol 2
+
+const countFeelings=(a,b,c=a=>a.split``.reduce((a,b)=>(a[b]=(a[b]||0)+1)&&a,{}),d=c(a))=>{  
+  const res=b.map(a=>Object.entries(c(a)).map(([a,b])=>[a,d[a]||0/b])).map(a=>a.every(a=>a[1]>0)?1:0).reduce((a,b)=>a+b);  
+  return `${res} feeling${res==1?'':'s'}.`
+}
