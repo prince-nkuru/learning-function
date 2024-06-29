@@ -8,3 +8,9 @@
 // -32 --> 5
 // Let's assume that all numbers in the input will be integer values.
 
+function sumDigits(number) {
+  
+  return Math.abs(number).toString().split('').reduce((acc, curr) => {
+    return acc + parseInt(curr);
+  },0)
+}
