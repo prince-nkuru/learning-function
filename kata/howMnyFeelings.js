@@ -21,3 +21,18 @@
 // If the feeling can be formed several times from different letters - plus one to the answer.
 
 // Eeach letter in string participates in the formation of all feelings. 'angerw' -> 2 feelings: 'anger' and 'awe'.
+
+function countFeelings(string, array) {
+  let count = 0;
+  
+  array.forEach((item) => {
+      if (item.split('').every((i) => {
+          return string.includes(i); 
+      })) {
+        count++;
+      }
+  });
+  
+  
+  return count == 1 ? `${count} feeling.` : `${count} feelings.`; 
+}
