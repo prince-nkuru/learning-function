@@ -21,3 +21,5 @@
 // Change only the @ and . characters.
 // Email addresses may contain more than one . character.
 // Note the additional whitespace around the bracketed literals in the examples!
+
+const obfuscate = email => email.replace('@', ' [at] ').replace(/\./g, ' [dot] ');
