@@ -23,3 +23,5 @@
 // Note the additional whitespace around the bracketed literals in the examples!
 
 const obfuscate = email => email.replace('@', ' [at] ').replace(/\./g, ' [dot] ');
+
+const obfuscates = email => email.replace(/[.@]/gi, m => ` [${ {'@':'at','.':'dot'}[m] }] `);
