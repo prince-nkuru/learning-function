@@ -35,3 +35,13 @@ myPromise.then(
   function(error){myDisplayer(error)}
   
 )
+
+// real example
+
+const myPromises = new Promise(function(myResolve, myReject) {
+  setTimeout(function(){ myResolve("I love You !!"); }, 3000);
+});
+
+myPromises.then(function(value) {
+  document.getElementById("demo").innerHTML = value;
+});
