@@ -4,14 +4,34 @@
 
 // A Promise is an Object that links Producing code and Consuming code
 
+// let myPromise = new Promise(function(myResolve, myReject){
+// // producing code (may take sometime)
+
+//   myResolve(); // when successful
+//   myReject(); // when failed
+// })
+
+// myPromise.then(
+//   function(value){/*if code is successful*/},
+//   function(error){/*if code is rejected*/}
+// )
+
+// example of promises
+
+function myDisplayer(some){
+  document.getElementById('demo') = some;
+}
 let myPromise = new Promise(function(myResolve, myReject){
-// producing code (may take sometime)
+  let x = 0;
 
-  myResolve(); // when successful
-  myReject(); // when failed
+  if (x == 0){
+    myResolve('OK')
+  }else {
+    myReject('error')
+  }
 })
-
 myPromise.then(
-  function(value){/*if code is successful*/},
-  function(error){/*if code is rejected*/}
+  function(value){myDisplayer(value)},
+  function(error){myDisplayer(error)}
+  
 )
