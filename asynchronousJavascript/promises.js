@@ -18,33 +18,33 @@
 
 // example of promises
 
-function myDisplayer(some){
-  document.getElementById('demo') = some;
-}
-let myPromise = new Promise(function(myResolve, myReject){
-  let x = 0;
+// function myDisplayer(some){
+//   document.getElementById('demo') = some;
+// }
+// let myPromise = new Promise(function(myResolve, myReject){
+//   let x = 0;
 
-  if (x == 0){
-    myResolve('OK')
-  }else {
-    myReject('error')
-  }
-})
-myPromise.then(
-  function(value){myDisplayer(value)},
-  function(error){myDisplayer(error)}
+//   if (x == 0){
+//     myResolve('OK')
+//   }else {
+//     myReject('error')
+//   }
+// })
+// myPromise.then(
+//   function(value){myDisplayer(value)},
+//   function(error){myDisplayer(error)}
   
-)
+// )
 
 // real example
 
-const myPromises = new Promise(function(myResolve, myReject) {
-  setTimeout(function(){ myResolve("I love You !!"); }, 3000);
-});
+// const myPromises = new Promise(function(myResolve, myReject) {
+//   setTimeout(function(){ myResolve("I love You !!"); }, 3000);
+// });
 
-myPromises.then(function(value) {
-  document.getElementById("demo").innerHTML = value;
-});
+// myPromises.then(function(value) {
+//   document.getElementById("demo").innerHTML = value;
+// });
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -64,10 +64,10 @@ myPromises.then(function(value) {
 // correct way using promise
 const cart = ['shoes', 'pants', 'watch'];
 
-addToCart(cart)
-.then(orderId => proceedToPayment(orderId))
-.then(paymentInfo =>showOrderSummary(paymentInfo))
-.then(paymentInfo => updateWallet(paymentInfo))
+// addToCart(cart)
+// .then(orderId => proceedToPayment(orderId))
+// .then(paymentInfo =>showOrderSummary(paymentInfo))
+// .then(paymentInfo => updateWallet(paymentInfo))
 
 // how to create promise. from namaste javascript
 
@@ -84,7 +84,11 @@ function createCart(cart){
         }
   });
 
-
+console.log(pr)
 
   return pr
+}
+
+function validateCart(cart){
+  return true;
 }
