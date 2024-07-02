@@ -70,6 +70,9 @@
 // .then(paymentInfo => updateWallet(paymentInfo))
 
 // how to create promise. from namaste javascript
+
+
+ // consuming codes
    const cart = ['shoes', 'pants', 'watch'];
    createCart(cart)
    .then(function(orderId){
@@ -87,11 +90,11 @@
     console.log(paymenInfo)
    
    })
-   .catch(function(err){
+   .catch(function(err){                 // codes below catch is executed , but catch control the above codes
     console.log(err.message)
    })
 
-   //producing
+   //producing codes
 
 function createCart(cart){
   const pr = new Promise(function(resolve,reject){
