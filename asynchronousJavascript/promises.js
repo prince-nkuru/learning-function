@@ -68,3 +68,23 @@ addToCart(cart)
 .then(orderId => proceedToPayment(orderId))
 .then(paymentInfo =>showOrderSummary(paymentInfo))
 .then(paymentInfo => updateWallet(paymentInfo))
+
+// how to create promise. from namaste javascript
+
+function createCart(cart){
+  const pr = new Promise(function(resolve,reject){
+        if (!validateCart(cart)){
+          const err = new Error('cart is not validated');
+          reject(err);
+        }
+        //logic for create order
+        const orderId = '12344'
+        if (orderId){
+          resolve(orderId)
+        }
+  });
+
+
+
+  return pr
+}
