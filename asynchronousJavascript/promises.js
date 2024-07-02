@@ -74,10 +74,24 @@
    createCart(cart)
    .then(function(orderId){
     console.log(orderId);
+    return orderId                           // dont forget return 
+   })
+   .then(function(orderId){
+    return proceedToPayment(orderId)
+   })
+   .then(function(paymentInfo){
+    console.log(paymentInfo)
+    return paymentInfo
+   })
+   .then(function(paymenInfo){            //  previously returned Value, become parameter to the next function
+    console.log(paymenInfo)
+   
    })
    .catch(function(err){
     console.log(err.message)
    })
+
+   //producing
 
 function createCart(cart){
   const pr = new Promise(function(resolve,reject){
@@ -97,6 +111,12 @@ function createCart(cart){
   return pr
 }
 
+function proceedToPayment(orderId){
+  return new Promise(function(resolve,reject){
+    resolve('program suceessful')
+  })
+}
+
 function validateCart(cart){
-  return false;
+  return true;
 }
