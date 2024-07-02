@@ -65,12 +65,6 @@ myPromises.then(function(value) {
 const cart = ['shoes', 'pants', 'watch'];
 
 addToCart(cart)
-.then(function(orderId){
-  return proceedToPayment(orderId)
-})
-.then(function(paymentInfo){
-  return showOrderSummary(paymentInfo)
-})
-.then(function(paymentInfo){
-  return updateWallet(paymentInfo)
-})
+.then(orderId => proceedToPayment(orderId))
+.then(paymentInfo =>showOrderSummary(paymentInfo))
+.then(paymentInfo => updateWallet(paymentInfo))
