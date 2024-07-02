@@ -45,3 +45,20 @@ const myPromises = new Promise(function(myResolve, myReject) {
 myPromises.then(function(value) {
   document.getElementById("demo").innerHTML = value;
 });
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+const cart = ['shoes', 'pants', 'watch'];
+
+addToCart(cart, function(orderId){
+  proceedToPayment(orderId, function(paymentInfo){                   // this is called callbackhell
+    showOrderSummary(paymentInfo,function(){
+      updateWalletBalance()
+    })
+  })
+})
+
+/////////////////////////////////////////////////////////////////////
+
+// correct way using promise

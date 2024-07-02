@@ -25,5 +25,5 @@ async function myFunction() {return "Hello";}
 
 myFunction().then(
   function(value) {myDisplayer(value);},
-  function(error) {myDisplayer(error);}
+  function(error) {myDisplayer(error);} // remove this line if you dont expect an error.
 );
