@@ -49,16 +49,28 @@ myPromises.then(function(value) {
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-const cart = ['shoes', 'pants', 'watch'];
+// const cart = ['shoes', 'pants', 'watch'];
 
-addToCart(cart, function(orderId){
-  proceedToPayment(orderId, function(paymentInfo){                   // this is called callbackhell
-    showOrderSummary(paymentInfo,function(){
-      updateWalletBalance()
-    })
-  })
-})
+// addToCart(cart, function(orderId){
+//   proceedToPayment(orderId, function(paymentInfo){                   // this is called callbackhell
+//     showOrderSummary(paymentInfo,function(){
+//       updateWalletBalance()
+//     })
+//   })
+// })
 
 /////////////////////////////////////////////////////////////////////
 
 // correct way using promise
+const cart = ['shoes', 'pants', 'watch'];
+
+addToCart(cart)
+.then(function(orderId){
+  return proceedToPayment(orderId)
+})
+.then(function(paymentInfo){
+  return showOrderSummary(paymentInfo)
+})
+.then(function(paymentInfo){
+  return updateWallet(paymentInfo)
+})
