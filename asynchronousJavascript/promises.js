@@ -62,14 +62,22 @@
 /////////////////////////////////////////////////////////////////////
 
 // correct way using promise
-const cart = ['shoes', 'pants', 'watch'];
+// const cart = ['shoes', 'pants', 'watch'];
 
-// addToCart(cart)
+// createCart(cart)
 // .then(orderId => proceedToPayment(orderId))
 // .then(paymentInfo =>showOrderSummary(paymentInfo))
 // .then(paymentInfo => updateWallet(paymentInfo))
 
 // how to create promise. from namaste javascript
+   const cart = ['shoes', 'pants', 'watch'];
+   createCart(cart)
+   .then(function(orderId){
+    console.log(orderId);
+   })
+   .catch(function(err){
+    console.log(err.message)
+   })
 
 function createCart(cart){
   const pr = new Promise(function(resolve,reject){
@@ -84,11 +92,11 @@ function createCart(cart){
         }
   });
 
-console.log(pr)
+
 
   return pr
 }
 
 function validateCart(cart){
-  return true;
+  return false;
 }
