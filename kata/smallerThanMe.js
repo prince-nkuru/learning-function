@@ -27,3 +27,15 @@ function smaller(nums) {
   }
   return arr;
 }
+
+// third
+
+const smallerThan = (n) => (v) => v < n;
+
+const smaller = (numbers) => numbers.map((number, index) => {
+  const numbersOnTheRight = numbers.slice(index);
+  const smallerThanCurrentNumber = numbersOnTheRight.filter(smallerThan(number));
+  const smallerThanCurrentNumberCount = smallerThanCurrentNumber.length;
+
+  return smallerThanCurrentNumberCount;
+});
