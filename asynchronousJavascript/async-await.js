@@ -47,3 +47,16 @@ function myFunctions(){
   }
 
   handlePromise();
+
+
+  /// REAL WORLD EXAMPLE
+
+  const API_URL = 'https://www.youtube.com/watch?v=6nv3qy3oNkc&t=140s'
+
+  async function handleURL(){
+    const data = await fetch(API_URL);    // fetch return promise object, so we handle it by await. if we want
+    const value = await data.json();      // to stringfy(json) it also return promise.
+    console.log(value);
+  }
+
+  handleURL();
