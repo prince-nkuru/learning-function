@@ -43,15 +43,19 @@ const p6 = new Promise((resolve,reject) => {
   setTimeout(() => reject('p3 fail'), 1000)
 })
 
-Promise.allSettled([p4,p5,p6])
+Promise.any([p4,p5,p6])
 .then((res) =>{
   console.log(res)
 })
 .catch((err) => {
   console.error(err)     // error keyword makes it look like error
+ //console.log(err.errors) this is to display all errors in object when in console.
 })
 
-/////////////////////// promise.race return the fast value, weather rejected or not the one with shorter time is returned
+/////////////////////// promise.race return the fast *settled* promise, weather rejected or not. the one with shorter time is returned
+
+
+/////////////////////// promise.any will wait for first settled resolved. if all fail, it will display aggragate error: all fail
 
 
 
