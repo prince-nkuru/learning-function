@@ -28,15 +28,21 @@ function myFunctions(){
 //   function(value) {myDisplayer(value);},
 //   function(error) {myDisplayer(error);} // remove this line if you dont expect an error.
 // );
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   const p = new Promise((resolve,reject) => {
-    resolve('promise is returned')
+    setTimeout(() => {
+      resolve('promise is returned')
+    }, 10000)
+   
   })
 
   // how to handle this promise using async and await
   
   async function handlePromise(){
+    //js engine will wait for val to get value of p , then it will exucutes next lines
     const val = await p;
+    console.log('namaste javascript');
     console.log(val)
   }
 
