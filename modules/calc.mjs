@@ -1,7 +1,8 @@
 console.log('working')
 
-import pkg from './main.mjs';
-const {sum, sub} = pkg;
+import {sum, sub} from './main.mjs';
+
 
 console.log(sum(2,5));
 console.log(sub(8,3));
+console.log(sub(1,3));
