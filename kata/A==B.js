@@ -15,3 +15,7 @@
 // Example:
 //   0 == 0  => true 
 //   0 == 1  => false 
+
+function d01(a, b) {
+  return !(a - b);
+}
