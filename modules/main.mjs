@@ -1,5 +1,5 @@
 
-export const sum = function(a, b){
+export const sum = (a, b) =>{
   return a + b;
 }
 
