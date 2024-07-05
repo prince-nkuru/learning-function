@@ -70,9 +70,9 @@
 // .then(paymentInfo => updateWallet(paymentInfo))
 
 // how to create promise. from namaste javascript
+ 
 
-
- // consuming codes
+ // consuming codes.
    const cart = ['shoes', 'pants', 'watch'];
    createCart(cart)
    .then(function(orderId){
@@ -103,7 +103,7 @@ function createCart(cart){
           reject(err);
         }
         //logic for create order
-        const orderId = '12344'
+        const orderId = '12344';
         if (orderId){
           resolve(orderId)
         }

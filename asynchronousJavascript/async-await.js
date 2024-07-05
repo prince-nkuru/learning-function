@@ -65,4 +65,4 @@ function myFunctions(){
    
   }
 
-  handleURL();
+  handleURL()//.catch(err){console.log(err)};

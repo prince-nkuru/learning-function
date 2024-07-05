@@ -21,13 +21,13 @@ console.log(employee.getWage());
 
 // constructor way of defining object
 
-function Person (first, last,age, eye){
+function Person(first, last,age, eye){
   this.firstName = first;
   this.lastName = last;
   this.age = age;
   this.eye = eye
+  }
 
-}
 const myFather = new Person("John", "Doe", 50, "blue");
 const myMother = new Person("Sally", "Rally", 48, "green");
 const mySister = new Person("Anna", "Rally", 18, "green");
