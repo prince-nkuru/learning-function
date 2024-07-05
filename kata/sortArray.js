@@ -14,3 +14,7 @@ function sort(initialArray, sortingArray) {
   }
   return result;
 }
+
+///////////////////////////
+
+const sort = (initArr, sortArr) => sortArr.reduce((arr, el, i) => (arr[el] = initArr[i], arr), []);
