@@ -70,3 +70,29 @@
 const canTraverse = matrix =>
   matrix[0].map((_, idx) => matrix.length - 1 - matrix.findLastIndex(row => !row[idx]))
            .every((val, idx, arr) => Math.abs(val - ~~arr[idx-1]) <= 1);
+
+           ////////////////////////////////////////////
+
+           function canTraverse(matrix) {
+            const [width,height] = [matrix[0].length, matrix.length];
+            
+            for(let col = 0, previous = 0; col < width; col++){
+              let current = height;
+              
+              for(let row = 0; row < height; row++){
+                if(matrix[row][col] === 0){
+                  current--;
+                }else{
+                  break;
+                }
+              }
+                  
+              if(Math.abs(current - previous) > 1){
+                return false;
+              }else{
+                previous = current;
+              }
+            }
+            
+            return true;
+          }
