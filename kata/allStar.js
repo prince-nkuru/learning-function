@@ -37,3 +37,12 @@ function findYear(month, dayOfWeek) {
 
   return 0;
 }
+
+///////////////////////////
+
+findYear = (m, d) => {
+  for (let y = 2014; y < 2050; y++) {
+    if (new Date(y, m).getDay() == d) return y;
+  }
+  return 0;
+}
