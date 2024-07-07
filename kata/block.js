@@ -99,4 +99,18 @@ const canTraverse = matrix =>
 
           ////////////////////////////////////////////////////
 
-          
+          function canTraverse(matrix) {
+  
+            for (let c=-1, r=matrix.length-1; c<matrix[0].length-1; c++) {
+              let next
+              for (let v=Math.max(r-1,-1); v<Math.min(r+2, matrix.length); v++) {
+                if ((matrix[v]?.[c+1]||0) == 0 && (matrix[v+1]?.[c+1] == 1 || matrix[v+1]?.[c+1] === undefined)) {
+                  next = v
+                  break
+                }
+              }
+              if (next === undefined) return false
+              r = next
+            }
+            return true;
+          }
