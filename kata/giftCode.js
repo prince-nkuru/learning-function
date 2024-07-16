@@ -11,3 +11,9 @@
 // "abcdef"                      -- => "abcdef"
 // "pqksuvy"                     -- => "kpqsuvy"
 // "zyxwvutsrqponmlkjihgfedcba"  -- => "abcdefghijklmnopqrstuvwxyz"
+
+function sortGiftCode(code){
+  let arr = code.split('');
+  
+  return arr.sort().join('');
+}
