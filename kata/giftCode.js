@@ -17,3 +17,7 @@ function sortGiftCode(code){
   
   return arr.sort().join('');
 }
+
+/////////////////////////////////////////
+
+const sortGiftCode = code => "abcdefghijklmnopqrstuvwxyz".split("").filter(letter => code.includes(letter)).join("")
