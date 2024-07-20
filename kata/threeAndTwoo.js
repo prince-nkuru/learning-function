@@ -72,3 +72,11 @@ function checkThreeAndTwo(array) {
   let y = Object.values(t)
   return y.includes(3) && y.includes(2)
 }
+///////////////////////////////////////////////////////////////////////////////////////
+
+function checkThreeAndTwo(array) {
+  let i, counts = {"a": 0, "b": 0, "c": 0}
+  for (i = 0; i < 5; i++)
+    counts[array[i]]++;
+  return counts["a"] ** 2 + counts["b"] ** 2 + counts["c"] ** 2 == 13;
+}
