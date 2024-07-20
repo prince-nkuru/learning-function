@@ -80,3 +80,16 @@ function checkThreeAndTwo(array) {
     counts[array[i]]++;
   return counts["a"] ** 2 + counts["b"] ** 2 + counts["c"] ** 2 == 13;
 }
+/////////////////////////////////////////////////////////////////////
+
+function checkThreeAndTwo(array) {
+  let countA = 0;
+  let countB = 0;
+  let countC = 0;
+  for (let i = 0; i < array.length; i++){
+  if(array[i] == "a") countA++
+  if(array[i] == "b") countB++
+  if(array[i] == "c") countC++
+  }
+  return [countA,countB,countC].includes(3) && [countA,countB,countC].includes(2) ? true : false
+ }
