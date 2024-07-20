@@ -103,3 +103,6 @@ function checkThreeAndTwo(array) {
   });
   return Object.keys(obj).length == 2 && (Object.values(obj)[0] == 2 || Object.values(obj)[0] == 3);
 }
+
+//////////////////////////////////////////////////////////////////////////
+const checkThreeAndTwo = arr => new Set(arr).size == 2 && [2, 3].includes(arr.filter(s => s == arr[0]).length);
