@@ -93,3 +93,13 @@ function checkThreeAndTwo(array) {
   }
   return [countA,countB,countC].includes(3) && [countA,countB,countC].includes(2) ? true : false
  }
+
+ ////////////////////////////////////////////////////////////////////////////////////////////////
+
+ const checkThreeAndTwo = array => {
+  const obj = {};
+  array.forEach(el => {
+      obj[el] ? obj[el]++ : obj[el] = 1;
+  });
+  return Object.keys(obj).length == 2 && (Object.values(obj)[0] == 2 || Object.values(obj)[0] == 3);
+}
