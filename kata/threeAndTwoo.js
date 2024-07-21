@@ -47,3 +47,14 @@ function checkThreeAndTwo(array) {
 console.log(checkThreeAndTwo(["a", "a", "a", "b", "b"])); // true
 console.log(checkThreeAndTwo(["a", "b", "c", "b", "c"])); // false
 console.log(checkThreeAndTwo(["a", "a", "a", "a", "a"])); // false
+
+
+//////////////////////////////////////////////////////////////////////////
+
+function checkThreeAndTwo(arr) {
+  let res = [];
+  res.push(arr.filter(x => x === 'a').length)
+  res.push(arr.filter(x => x === 'b').length)
+  res.push(arr.filter(x => x === 'c').length)
+  return res.includes(2) && res.includes(3);
+}
