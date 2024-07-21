@@ -63,3 +63,12 @@ function checkThreeAndTwo(arr) {
 
 const checkThreeAndTwo = array =>
   [2, 3].includes(array.filter(val => val === array[0]).length) && new Set(array).size === 2;
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+function checkThreeAndTwo(array) {
+  let t = {a:0, b:0, c:0}
+  let a = array.map(x => t[x]++)
+  let y = Object.values(t)
+  return y.includes(3) && y.includes(2)
+}
