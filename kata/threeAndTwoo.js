@@ -27,3 +27,23 @@ function checkThreeAndTwo(array) {
   }
   return (item1 == 2 || item2 == 2 || item3 == 2) && (item1 == 3 || item2 == 3 || item3 == 3);
 }
+
+///////////////////////////////////////////////////
+
+function checkThreeAndTwo(array) {
+  // Create an object to count the occurrences of each character
+  const counts = { 'a': 0, 'b': 0, 'c': 0 };
+
+  // Count the occurrences of each character
+  for (let char of array) {
+      counts[char]++;
+  }
+
+  // Check if we have one value with 3 occurrences and another with 2 occurrences
+  return Object.values(counts).sort().join('') === '023';
+}
+
+// Examples
+console.log(checkThreeAndTwo(["a", "a", "a", "b", "b"])); // true
+console.log(checkThreeAndTwo(["a", "b", "c", "b", "c"])); // false
+console.log(checkThreeAndTwo(["a", "a", "a", "a", "a"])); // false
