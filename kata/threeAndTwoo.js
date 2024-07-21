@@ -58,3 +58,8 @@ function checkThreeAndTwo(arr) {
   res.push(arr.filter(x => x === 'c').length)
   return res.includes(2) && res.includes(3);
 }
+
+////////////////////////////////////////////////////////////////////////////////
+
+const checkThreeAndTwo = array =>
+  [2, 3].includes(array.filter(val => val === array[0]).length) && new Set(array).size === 2;
