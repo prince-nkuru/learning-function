@@ -44,3 +44,5 @@ class LCG {
     return (this._seed = (2 * this._seed + 3) % 10) / 10;
   }
 }
+
+// this is object oriented programming//
