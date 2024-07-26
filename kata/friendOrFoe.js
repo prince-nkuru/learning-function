@@ -11,3 +11,16 @@
 // If there are no friends return {""}.
 
 // Note: keep the original order of the names in the output.
+
+function friend(friends){
+  
+  let newArr = []
+  for (let i =0; i < friends.length; i++){
+    if (friends[i].length === 4){
+      newArr.push(friends[i])
+    }else if (friends.length === 0){
+      return {}
+    }
+  }
+  return newArr;
+}
