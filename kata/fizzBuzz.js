@@ -35,3 +35,26 @@ function fizzBuzzCuckooClock(time) {
     minute % 5  ==  0 ? "Buzz" : 
                         "tick";
 }
+
+/////////////////////////////////////////////////////////////////////
+
+const fizzBuzzCuckooClock = time => {
+  let [ hour = convertHour(), minute ] = time.split(':').map(Number)
+
+  if (minute === 0)
+    return 'Cuckoo '.repeat(((hour - 24) % 12) + 12).trim()
+  
+  if (minute === 30)
+    return 'Cuckoo'
+  
+  if (minute % 3 === 0 && minute % 5 === 0)
+    return 'Fizz Buzz'
+  
+  if (minute % 3 === 0)
+    return 'Fizz'
+  
+  if (minute % 5 === 0)
+    return 'Buzz'
+  
+  return 'tick'
+}
