@@ -14,3 +14,9 @@ function betweenExtremes(numbers) {
   
   return sorted[sorted.length - 1] - sorted[0];
 }
+
+/////////////////////////////////////////////////////////
+
+function betweenExtremes(numbers) {
+  return Math.max(...numbers) - Math.min(...numbers);
+}
