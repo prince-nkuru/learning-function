@@ -5,3 +5,11 @@ In this kata, you will be given an array. Each value represents a meeting room. 
 'X' --> busy
 'O' --> empty
 If all rooms are busy, return "None available!"*/
+
+
+function meeting(x) {
+  if (x.indexOf('O') > -1) {
+    return x.indexOf('O');
+  }
+  return 'None available!';
+}
