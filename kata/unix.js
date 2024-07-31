@@ -6,3 +6,6 @@
 
 // ["a", "a", "b", "b", "c", "a", "b", "c"]  =>  ["a", "b", "c", "a", "b", "c"]
 
+function uniq(a) {
+  return a.filter((_, i) => a[i] !== a[i+1])
+}
