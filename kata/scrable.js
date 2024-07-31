@@ -10,3 +10,22 @@ The function takes two arguments :
 
 You must return the index of the shortest word which realize the highest score.
 If the length and the score are the same for two elements, return the index of the first one.*/
+
+function getBestWord(points,words){
+   
+  let highScore = { score: 0, length: 0, index: 0 };
+  
+  for(let i = 0; i < words.length; i++) {
+    
+    let score = 0;
+    for (let c = 0; c < words[i].length; c++) {
+      score += points[words[i].charCodeAt(c)- 65];
+    }
+    
+    if(score > highScore.score ||  (highScore.score === score && words[i].length < highScore.length)) {
+      highScore = { score: score, length : words[i].length, index: i };
+    }
+  } 
+  
+  return highScore.index
+}
