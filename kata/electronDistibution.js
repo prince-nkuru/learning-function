@@ -11,3 +11,14 @@ Ex.:    atomicNumber(1); should return [1]
         atomicNumber(10); should return [2, 8]
         atomicNumber(11); should return [2, 8, 1]
         atomicNumber(47); should return [2, 8, 18, 19]*/
+
+        function atomicNumber(num) {
+          var c = 1, res = Array();
+          while (num > c * c * 2) {
+            res.push(c * c * 2);
+            num -= c * c * 2;
+            c++;
+          }
+          res.push(num);
+          return res;
+        }
