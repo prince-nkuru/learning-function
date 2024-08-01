@@ -53,3 +53,18 @@ evenNumber(40);
 const isAscending = (arr) => arr.every((_, i) => i === 0 || arr[i -1] < arr[i]);
 
 console.log(isAscending([1,2,3,4,5,6]));
+
+
+ const seven = (arr) => {
+ let res = arr.join(' ');
+ if (res.includes(7)){
+  console.log(res);
+  console.log('Booms!')
+  return 'Booms!'
+ }else {
+  console.log(res);
+  console.log(' does not contain 7')
+  return ' does not contain 7'
+ }
+ }
+ seven([1,3,6,4,33])
