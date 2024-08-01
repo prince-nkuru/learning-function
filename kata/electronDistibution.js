@@ -22,3 +22,14 @@ Ex.:    atomicNumber(1); should return [1]
           res.push(num);
           return res;
         }
+
+        //////////////////////////////////////////////////////////////////////
+
+        function atomicNumber(narf) {
+          let zort = [], poit = 0;
+          while(narf) {
+            zort.push(Math.min(2 * ++poit ** 2, narf));
+            narf -= zort[zort.length - 1];
+          }
+          return zort;
+        }
