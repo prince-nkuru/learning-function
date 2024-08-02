@@ -8,3 +8,14 @@
 // [0, 5, 1, 3, 2, 9, 7, 6, 4] --> 8
 // [9, 2, 4, 5, 7, 0, 8, 6, 1] --> 3
 
+function getMissingElement(superImportantArray){
+  let ten = [0,1,2,3,4,5,6,7,8,9]
+  let arr = [...new Set(superImportantArray)];
+  let str = arr.toString();
+  for (let i = 0; i < ten.length; i++){
+    if (!str.includes(ten[i])){
+      return ten[i];
+    }
+  }
+  
+}
