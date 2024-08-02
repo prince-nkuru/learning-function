@@ -6,3 +6,14 @@ const people = [
 ]
 //1. average salaries
 //people.reduce((prev, curr) => {return (prev + parseInt(curr.salary))/people.length},0)
+
+//2. people older than 23
+
+//people.filter(person => new Date().getFullYear() - new Date(person.DOB).getFullYear() > 23 )
+
+//3. return arr of full names
+//people.map(person => person.fullName = person.firstName + ' ' + person.lastName ) or
+//people.map(person => `${person.firstName} ${person.lastName}` )
+//people.map(person => ({...person, fullName: `${person.firstName} ${person.lastName}`} )) prefered way
+
+  
