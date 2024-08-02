@@ -27,3 +27,9 @@ function getMissingElement(superImportantArray){
     if (superImportantArray.indexOf(i) === -1) return i;
   }
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+function getMissingElement(superImportantArray) {
+  return superImportantArray.reduce(function (sum, value) {return sum - value;}, 45);
+}
