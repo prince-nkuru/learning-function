@@ -12,8 +12,25 @@ const people = [
 //people.filter(person => new Date().getFullYear() - new Date(person.DOB).getFullYear() > 23 )
 
 //3. return arr of full names
+
 //people.map(person => person.fullName = person.firstName + ' ' + person.lastName ) or
 //people.map(person => `${person.firstName} ${person.lastName}` )
 //people.map(person => ({...person, fullName: `${person.firstName} ${person.lastName}`} )) prefered way
 
-  
+//4.
+
+//arrange from youngest to oldest
+
+/*
+ 
+people.sort((personA, personB) => new Date(personA.DOB) - new Date(personB.DOB));
+
+
+
+*/
+ 
+
+  // 5. how many people are there in each department?
+
+  let num = people.reduce((prev, curr) => ({...prev, [curr.department]: prev[curr.department] + 1 || 1}), {});
+  console.log(num);
