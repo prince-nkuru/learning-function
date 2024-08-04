@@ -75,3 +75,11 @@ const coins = (n) =>{
  return result;
 }
 coins(49)
+
+////////////////////////////////////////////////////////////////////
+  // function to generate random hexadecimal color code...... it is nber
+
+  const getRandomHexNumber = () =>
+    Math.floor(Math.random() * 16).toString(16)
+
+  const getRandomHexColor = () => '#' + Array.from({length:6}).map(getRandomHexNumber).join('');
