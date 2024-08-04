@@ -52,3 +52,16 @@ const isEqual = (a, b) => {
   return Object.keys(a).every(key => b[a]);
 }
 console.log(isEqual(ob1, ob2))
+
+//////////////////////////////////////////////////////////////////////////
+
+// convert comma separated string into 2D array. strings are in 3 lines
+
+const parseCsv = (string) => {
+  return string.split('\n').map(row => row.split(','));
+  }
+  console.log(
+   parseCsv(`abc,def,ghi
+ jkl,mno,pqr
+ stu,vxw, yza`
+   ))
