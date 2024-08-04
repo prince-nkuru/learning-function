@@ -51,3 +51,13 @@ function solution(n, m) {
   
   return numbers.filter(number => number >= n && number <= m);
 }
+
+const vowel = (str) => {
+  let count = 0;
+  let res = str.split('').filter(s => s === 'a' || s === 'o' || s === 'u' || s === 'i' || s === 'e' ).length
+  console.log(res);
+  return count
+}
+vowel('abacdesfoiuu')
+// write a function that convert amount into coins
+
