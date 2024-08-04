@@ -34,3 +34,21 @@ const divisibleByLast = (x) => {
   let arr = [...x+[]]
   return [false].concat(arr.slice(1).map((el, i)=> el % arr[i] === 0))
 }
+
+////////////////////////////////////////////////////////////   
+
+// function to extract unique character in a string 
+
+const getUniqueChar = (str) =>{
+  return str.split('').filter((item, index, arr) =>arr.slice(index + 1).indexOf(item) === -1)
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+//javascript function to compare if 2 objects have the same properties. second may includes additional properties
+const ob1 = {a:1, b:3, c: 5};
+const ob2 = {a:1, b:3,c:5}
+const isEqual = (a, b) => {
+  return Object.keys(a).every(key => b[a]);
+}
+console.log(isEqual(ob1, ob2))
