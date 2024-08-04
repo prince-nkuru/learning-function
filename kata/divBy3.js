@@ -61,3 +61,17 @@ const vowel = (str) => {
 vowel('abacdesfoiuu')
 // write a function that convert amount into coins
 
+const coins = (n) =>{
+  let coinValues = [25,10,5,2,1];
+  let result = [];
+
+  for (let coin of coinValues){
+  while(n >= coin){
+    n -= coin;
+    result.push(coin)
+  }
+ }
+ console.log(result);
+ return result;
+}
+coins(49)
