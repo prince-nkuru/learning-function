@@ -31,3 +31,23 @@ function isPrime(p) {
   }
   return true;
 }
+
+/////////////////////////////////////////////////////////////
+
+let numbers = []
+function isPrime(p) {
+  for (let i = 2n; i * i <= p; i++) {
+    if (p % i === 0n) return false;
+  }
+  return true;
+} 
+
+function solution(n, m) {
+  if (!numbers.length) {
+    for (let i = 2n; i <= 31622n; i++) {
+      if(isPrime(i)) numbers.push(i**4n)
+    }
+  }
+  
+  return numbers.filter(number => number >= n && number <= m);
+}
