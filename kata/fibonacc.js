@@ -11,3 +11,21 @@ function isFibo(a,b,f) {
   }
   return a == f;
 }
+/////////////////////////////////////////////////
+
+function isFibo(a,b,f) {
+  if (f === a || f === b) return true;
+  let fib1 = a;
+  let fib2 = b;
+  let nextFib = fib1 + fib2;
+  
+  // Generate the sequence until we surpass or match f
+  while (nextFib <= f) {
+    if (nextFib === f) return true; // Check if f is part of the sequence
+    fib1 = fib2;        // Update first number
+    fib2 = nextFib;     // Update second number
+    nextFib = fib1 + fib2;  // Generate next number in the sequence
+  }
+  
+  return false;
+}
