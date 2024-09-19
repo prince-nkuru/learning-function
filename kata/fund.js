@@ -28,3 +28,11 @@ function sumArray(array) {
 }
 
 sumArray = a => a ? a.sort((x, y) => x - y).slice(1, -1).reduce((s, e) => s + e, 0) : 0
+
+/////////////////////////
+
+function sumArray(array) {
+  return Array.isArray(array) && array.length > 1
+    ? array.reduce((s, n) => s + n, 0) - Math.min(...array) - Math.max(...array)
+    : 0
+}
