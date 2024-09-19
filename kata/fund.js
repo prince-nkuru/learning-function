@@ -36,3 +36,22 @@ function sumArray(array) {
     ? array.reduce((s, n) => s + n, 0) - Math.min(...array) - Math.max(...array)
     : 0
 }
+
+//////////////////////////////////////
+
+function sumArray(array) {
+  
+  if (array == null || array.length <= 2) {
+    return 0
+  }
+  
+  var max = Math.max.apply(Math, array);
+  var min = Math.min.apply(Math, array);
+  var sum = 0
+  
+  for (i = 0; i < array.length; i++) {
+    sum += array[i];
+   }
+
+  return sum - max - min
+}
